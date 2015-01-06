@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_shoppingcart_up"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_item_shoppingcart_order_child"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="8dip" >
+
+            <RelativeLayout
+                android:id="@+id/rl_item_shoppingcart_order_child_right"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:id="@+id/iv_item_shoppingcart_order_child_goods"
+                    android:layout_width="74dip"
+                    android:layout_height="78dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dip"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/tv_item_shoppingcart_order_child_describe"
+                    style="@style/font_content_medium_black"
+                    android:layout_alignTop="@+id/iv_item_shoppingcart_order_child_goods"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/iv_item_shoppingcart_order_child_goods"
+                    android:maxEms="8"
+                    android:singleLine="false"
+                    android:text="努力加载中..." />
+
+                <TextView
+                    android:id="@+id/tv_item_shoppingcart_order_child_price"
+                    style="@style/font_content_medium_black"
+                    android:layout_alignParentRight="true"
+                    android:text="加载中" />
+
+                <TextView
+                    android:id="@+id/tv_item_shoppingcart_order_child_counts"
+                    style="@style/font_content_medium_black"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_item_shoppingcart_order_child_price"
+                    android:layout_marginTop="5dip"
+                    android:text="x1" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_shoppingcart_order_child_1_spline"
+            style="@style/spline_shoppingcart_draw_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/rl_shoppingcart_order_freight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:visibility="gone"
+            android:paddingTop="5dip" >
+
+            <TextView
+                android:id="@+id/tv_item_shoppingcart_order_freight_show"
+                style="@style/font_content_medium_black"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="运送方式:" />
+
+            <TextView
+                android:id="@+id/tv_item_shoppingcart_order_freight_type"
+                style="@style/font_content_medium_black"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="普通快递" />
+
+            <TextView
+                android:id="@+id/tv_item_shoppingcart_order_freight_money"
+                style="@style/font_content_medium_red"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="5dip"
+                android:paddingRight="10dip"
+                android:paddingTop="5dip"
+                android:text="33333" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_item_shoppingcart_order_child_spline"
+        style="@style/spline_shoppingcart_draw_horizontal"
+        android:layout_below="@+id/ll_shoppingcart_up" />
+
+    <LinearLayout
+        android:id="@+id/rl_item_shoppingcart_order_child_end"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_item_shoppingcart_order_child_spline"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_item_shoppingcart_order_notedetail"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:layout_margin="10dip"
+            android:background="@drawable/input_edit_draw"
+            android:hint="选填，可以写您对商品的其他要求"
+            android:paddingLeft="5dip"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_item_shoppingcart_order_next"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/bg_lable_460x46_horizontal"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/font_content_larger_gray"
+                android:gravity="center"
+                android:text="下一步" />
+        </LinearLayout>
+
+        <ImageView
+            style="@style/spline_main_draw_horizontal"
+            android:layout_alignParentBottom="true" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_forgetpassword_top"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_mycenter_forgetpassword_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="修改密码" >
+        </TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mycenter_forgetpassword_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_mycenter_forgetpassword_top"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_mycenter_forgetpassword_oldpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_top_448x74"
+            android:hint="请输入旧密码"
+            android:padding="10dp" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/et_mycenter_forgetpassword_newpassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_middle_448x74"
+            android:hint="请输入新密码"
+            android:padding="10dp" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/et_mycenter_forgetpassword_newpassword2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_bottom_448x74"
+            android:hint="请再次输入登陆新密码"
+            android:padding="10dp" >
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_mycenter_forgetpassword_finish"
+        style="@style/btn_Login"
+        android:layout_below="@+id/ll_mycenter_forgetpassword_input"
+        android:layout_centerHorizontal="true"
+        android:text="完成" >
+    </Button>
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_modifypassword_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

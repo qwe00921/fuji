@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_item_groupbuy_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="8dip" >
+        <FrameLayout
+            android:id="@+id/fl_item_groupbuy_main"
+            android:layout_width="110dip"
+            android:layout_height="100dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/iv_item_groupbuy_main"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/image_load" />
+        </FrameLayout>
+        
+        <TextView
+            android:id="@+id/tv_item_groupbuy_main_goodsname"
+            style="@style/font_content_medium_black"
+            android:layout_alignTop="@+id/fl_item_groupbuy_main"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/fl_item_groupbuy_main"
+            android:maxEms="14"
+            android:textSize="16sp"
+            android:singleLine="false"
+            android:text="111111" />
+
+        <TextView
+            android:id="@+id/tv_item_groupbuy_main_goodsdescribe"
+            style="@style/font_content_medium_black"
+            android:layout_below="@+id/tv_item_groupbuy_main_goodsname"
+            android:layout_toRightOf="@+id/fl_item_groupbuy_main"
+            android:paddingRight="10dip"
+            android:visibility="gone"
+            android:text="1111"
+             />
+ 		
+ 		<TextView
+            android:id="@+id/tv_item_groupbuy_main_discountedprice"
+            style="@style/font_title_medium_red"
+            android:layout_alignBottom="@+id/fl_item_groupbuy_main"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/tv_item_groupbuy_main_originalprice_show"
+            android:text="¥88.00" />
+ 
+        <TextView
+            android:id="@+id/tv_item_groupbuy_main_originalprice_pre1"
+            style="@style/font_content_small_gray"
+            android:layout_alignBottom="@+id/fl_item_groupbuy_main"
+            android:layout_toRightOf="@+id/fl_item_groupbuy_main"
+            android:text="原价" />
+        
+        <TextView
+            android:id="@+id/tv_item_groupbuy_main_originalprice_show"
+            style="@style/font_content_small_gray"
+            android:layout_alignBottom="@+id/tv_item_groupbuy_main_originalprice_pre1"
+            android:layout_toRightOf="@+id/tv_item_groupbuy_main_originalprice_pre1"
+            android:text="¥108" />
+
+        <TextView
+            android:id="@+id/tv_item_groupbuy_main_buyingcounts"
+            style="@style/font_title_small_black"
+            android:layout_alignBottom="@+id/fl_item_groupbuy_main"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="2dip"
+            android:text="11" />
+
+        
+        </RelativeLayout>
+
+     <View
+        android:background="@color/grey2"
+        android:layout_height="0.5dip"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/rl_item_groupbuy_main" /> 
+
+</LinearLayout>

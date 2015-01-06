@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_goodscommentsdetails_title"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_mycenter_goodscommentsdetail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="我的评价" >
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rl_mycenter_goodscommentsdetail_bottommenu"
+        android:layout_below="@+id/rl_mycenter_goodscommentsdetails_title"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_mycenter_goodscommentsdetail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/tv_grey_title"
+                    android:layout_margin="10dip"
+                    android:text="选择评价" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_mycenter_goodscommentsdetail_commodityPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_login_top_448x74"
+                    android:padding="10dip" >
+
+                    <TextView
+                        style="@style/tv_mycenter_firstrank_big"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_commodityPoint1"
+                        android:text="商品描述相符" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_commodityPoint1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_commodityPoint2"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_commodityPoint2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_commodityPoint3"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_commodityPoint3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_commodityPoint4"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_commodityPoint4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_commodityPoint5"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_commodityPoint5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_comments_nostars" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mycenter_goodscommentsdetail_servePoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_login_middle_448x74"
+                    android:padding="10dip" >
+
+                    <TextView
+                        style="@style/tv_mycenter_firstrank_big"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_servePoint1"
+                        android:text="商家服务态度" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_servePoint1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_servePoint2"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_servePoint2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_servePoint3"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_servePoint3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_servePoint4"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_servePoint4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_servePoint5"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_servePoint5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_comments_nostars" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mycenter_goodscommentsdetail_sellerPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_login_middle_448x74"
+                    android:padding="10dip" >
+
+                    <TextView
+                        style="@style/tv_mycenter_firstrank_big"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_sellerPoint1"
+                        android:text="商家发货速度" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_sellerPoint1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_sellerPoint2"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_sellerPoint2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_sellerPoint3"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_sellerPoint3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_sellerPoint4"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_sellerPoint4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_sellerPoint5"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_sellerPoint5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_comments_nostars" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mycenter_goodscommentsdetail_logisticsPonit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_login_bottom_448x74"
+                    android:padding="10dip" >
+
+                    <TextView
+                        style="@style/tv_mycenter_firstrank_big"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit1"
+                        android:text="物流发货速度" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit2"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit3"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit4"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit5"
+                        android:src="@drawable/ic_comments_nostars" />
+
+                    <ImageView
+                        android:id="@+id/iv_mycenter_goodscommentsdetail_logisticsPonit5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_comments_nostars" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_mycenter_goodscommentsdetail_anonymity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_mycenter_goodscommentsdetail"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/input_edit_448x74" >
+
+                <TextView
+                    style="@style/tv_mycenter_firstrank_big"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dip"
+                    android:text="匿名评价？" />
+
+                <ImageView
+                    android:id="@+id/iv_mycenter_goodscommentsdetail_anonymity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/btn_lable_on" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_mycenter_goodscommentsdetail_comments"
+                style="@style/tv_grey_title"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/rl_mycenter_goodscommentsdetail_anonymity"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginTop="10dip"
+                android:text="您的评语" />
+
+            <EditText
+                android:id="@+id/et_mycenter_goodscommentsdetail_comments"
+                android:layout_width="fill_parent"
+                android:layout_height="90dip"
+                android:layout_below="@+id/tv_mycenter_goodscommentsdetail_comments"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/input_edit_draw"
+                android:gravity="left|top"
+                android:hint="请输入您的评语"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip" >
+            </EditText>
+
+            <Button
+                android:id="@+id/btn_mycenter_goodscommentsdetail_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/et_mycenter_goodscommentsdetail_comments"
+                android:layout_alignParentRight="true"
+                android:layout_alignRight="@+id/et_mycenter_goodscommentsdetail_comments"
+                android:layout_below="@+id/et_mycenter_goodscommentsdetail_comments"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:text="确认评价"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_goodscommentsdetail_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

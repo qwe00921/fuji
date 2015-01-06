@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_set_exit"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:clickable="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_list_more" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_mycenter_set_exit"
+            style="@style/tv_mycenter_firstrank_big"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="注销登录/切换用户" >
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView style="@style/spline_main_draw_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_set_modifypassword"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:clickable="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_list_more" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_mycenter_set_modifypassword"
+            style="@style/tv_mycenter_firstrank_big"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="修改密码" >
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView style="@style/spline_main_draw_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_set_modifyemail"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:clickable="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_list_more" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_mycenter_set_modifyemail"
+            style="@style/tv_mycenter_firstrank_big"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="修改邮箱" >
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView style="@style/spline_main_draw_horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_set_modifyphone"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:clickable="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_list_more" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_mycenter_set_modifyphone"
+            style="@style/tv_mycenter_firstrank_big"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="修改绑定手机号码" >
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView style="@style/spline_main_draw_horizontal" />
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_addressmodify_title"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_mycenter_addressmodify_modify_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="收货地址修改" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_mycenter_addressmodify_modify_save"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/state_press_bg_top_right"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mycenter_addressmodify"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_mycenter_addressmodify_title"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/input_login_top_448x74"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_mycenter_addressmodify_consigneename"
+                style="@style/tv_mycenter_firstrank_big"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="收货人姓名:" />
+
+            <EditText
+                android:id="@+id/et_mycenter_addressmodify_consigneename2"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_width="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_mycenter_addressmodify_consigneename"
+                android:background="@null"
+                android:hint="请输入收货人姓名" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_middle_448x74"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_mycenter_addressmodify_phone"
+                style="@style/tv_mycenter_firstrank_big"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="手机号码:" />
+
+            <EditText
+                android:id="@+id/et_mycenter_addressmodify_phone2"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_width="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_mycenter_addressmodify_phone"
+                android:background="@null"
+                android:hint="请输入手机号码"
+                android:inputType="number" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_middle_448x74"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_mycenter_addressmodify_postalcode"
+                style="@style/tv_mycenter_firstrank_big"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="邮政编码:" />
+
+            <EditText
+                android:id="@+id/et_mycenter_addressmodify_postalcode2"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_width="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_mycenter_addressmodify_postalcode"
+                android:background="@null"
+                android:hint="请输入邮政编码"
+                android:inputType="number" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_bottom_448x74"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_mycenter_addressmodify_address"
+                style="@style/tv_mycenter_firstrank_big"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="详细地址:" />
+
+            <EditText
+                android:id="@+id/et_mycenter_addressmodify_address2"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_width="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_mycenter_addressmodify_address"
+                android:background="@null"
+                android:hint="请输入详细地址"
+                android:maxEms="14"
+                android:singleLine="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_addressdetail_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

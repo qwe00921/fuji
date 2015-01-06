@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="15dip" >
+
+    <TextView
+        android:id="@+id/t1"
+        style="@style/tv_describe_small"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:text="姓名："
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_item_mycenter_address_buyername"
+        style="@style/tv_describe_small"
+        android:layout_marginBottom="10dip"
+        android:layout_toRightOf="@+id/t1"
+        android:text="李晓明"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/t2"
+        style="@style/tv_describe_small"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_toRightOf="@+id/tv_item_mycenter_address_buyername"
+        android:text="电话："
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_item_mycenter_address_buyerphone"
+        style="@style/tv_describe_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_item_mycenter_address_buyername"
+        android:layout_marginBottom="10dip"
+        android:layout_toRightOf="@+id/t2"
+        android:text="189456135"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/t3"
+        style="@style/tv_describe_small"
+        android:layout_below="@+id/t1"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:text="收货地址："
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_item_mycenter_address_detail"
+        style="@style/tv_describe_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t1"
+        android:layout_marginBottom="10dip"
+        android:layout_toRightOf="@+id/t3"
+        android:ellipsize="end"
+        android:maxLength="18"
+        android:singleLine="true"
+        android:text="福建省福州市鼓楼区东街22号新华都8楼812#"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/iv_item_mycenter_address_tick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:visibility="visible" />
+
+    <ImageView
+        style="@style/spline_main_draw_horizontal"
+        android:layout_below="@+id/tv_item_mycenter_address_detail" />
+
+</RelativeLayout>

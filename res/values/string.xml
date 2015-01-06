@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, CommunityClientActivity!</string>
+    <string name="app_name">福桔装饰</string>
+    <string name="debugCollect">testUrl</string>
+    <string name="debuggerFlag">true</string>
+    <string name="net_exception">网络异常，请检查网络</string>
+    <string name="fill_in_exception">填写有误，请检查填写数据</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_fail">注册失败</string>
+    <string name="register_already">已注册过</string>
+    <string name="register_name_repeat">用户名重复</string>
+    <!-- z
+    <string name="register_name_phone_repeat">用户名、电话重复</string>
+    <string name="register_name_email_phone_repeat">用户名、邮箱、电话重复</string>
+    <string name="register_email_phone_repeat">邮箱、电话重复</string>
+   	 电话号码可重复
+     -->
+    <string name="register_name_phone_repeat">用户名重复</string>
+    <string name="register_name_email_phone_repeat">用户名、邮箱重复</string>
+    <string name="register_email_phone_repeat">邮箱重复</string>
+    <string name="register_name_email_repeat">用户名、邮箱重复</string>
+    <string name="register_email_repeat">邮箱重复</string>
+    <string name="register_phone_repeat">电话重复</string>
+
+  
+    <!--    -->
+    <string name="base_url">http://112.5.141.67:81</string>
+    <string name="DeleteOrder_http">http://112.5.141.67:81/android/DeleteOrder.php</string>
+    <string name="getadv_http">http://112.5.141.67:81/android/getAdvInfo.php</string>
+    <string name="getadvGoodsList_http">http://112.5.141.67:81/android/getAdvProList.php</string>
+    <string name="register_http">http://112.5.141.67:81/android/register.php</string>
+    <string name="login_http">http://112.5.141.67:81/android/login.php</string>
+    <string name="communityGoodsCategoryInfo_http">http://112.5.141.67:81/android/getCommunityGoodsCategoryInfo.php</string>
+    <string name="getGoodsList_http">http://112.5.141.67:81/android/getGoodsList.php</string>
+    <string name="getGoodsDetail_http">http://112.5.141.67:81/android/getGoodsDetail.php</string>
+    <string name="commitComment_http">http://112.5.141.67:81/android/commitComment.php</string>
+    <!-- <string name="getCommentInfo_http">http://112.5.141.67:81/android/getCommentInfo.php</string> -->
+    <string name="searchGoodsInfo_http">http://112.5.141.67:81/android/searchGoogsInfo.php</string>
+    <string name="getHotKeyword_http">http://112.5.141.67:81/android/getHotKeyword.php</string>
+    <string name="feedback_http">http://112.5.141.67:81/android/commitIdea.php</string>
+    <string name="insertCollectGoods_http">http://112.5.141.67:81/android/insertCollectGoods.php</string>
+    <string name="getGroupBuyingGoogsListInfo_http">http://112.5.141.67:81/android/getGroupBuyingGoogsListInfo.php</string>
+    <string name="getGroupBuyingGoodsCategoryInfo_http">http://112.5.141.67:81/android/getGroupBuyingGoodsCategoryInfo.php</string>
+    <string name="insertConsigneeAddress_http">http://112.5.141.67:81/android/insertConsigneeAddress.php</string>
+    <string name="getConsigneeAddress_http">http://112.5.141.67:81/android/getConsigneeAddress.php</string>
+    <string name="updateConsigneeAddress_http">http://112.5.141.67:81/android/updateConsigneeAddress.php</string>
+    <string name="deleteConsigneeAddress_http">http://112.5.141.67:81/android/deleteConsigneeAddress.php</string>
+    <string name="getCollectGoods_http">http://112.5.141.67:81/android/getCollectGoods.php</string>
+    <string name="deleteCollectGoods_http">http://112.5.141.67:81/android/deleteCollectGoods.php</string>
+    <string name="getShopsDetailInfo_php">http://112.5.141.67:81/android/getShopsDetailInfo.php</string>
+    <string name="ModifyPassWord_php">http://112.5.141.67:81/android/ModifyPassWord.php</string>
+    <string name="ModifyEmail_php">http://112.5.141.67:81/android/ModifyEmail.php</string>
+    <string name="ModifyPhone_php">http://112.5.141.67:81/android/ModifyPhone.php</string>
+    <string name="GetAuthCode_php">http://112.5.141.67:81/android/GetAuthCode.php</string>
+    <string name="GetOrderList_php">http://112.5.141.67:81/android/GetOrderList.php</string>
+    <string name="GetOrderNumber_php">http://112.5.141.67:81/android/GetOrderNumber.php</string>
+    <string name="OrderManage_php">http://112.5.141.67:81/android/OrderManage.php</string>
+    <string name="GetOrderInfo_php">http://112.5.141.67:81/android/GetOrderInfo.php</string>
+    <string name="UploadOrder_php">http://112.5.141.67:81/android/UploadOrder.php</string>
+    <string name="GetTN_php">http://112.5.141.67:81/android/GetTN.php</string>
+    <string name="CheckStorageCount_php">http://112.5.141.67:81/android/CheckStorageCount.php</string>
+    <string name="CheckPayState_php">http://112.5.141.67:81/android/CheckPayState.php</string>    <string name="GetminPurchasemoney_php">http://112.5.141.67:81/android/GetminPurchasemoney.php</string>
+    <string name="GetHomemaininfo_php">http://112.5.141.67:81/android/GetHomemaininfo.php</string>
+    <string name="ForgetPassword_php">http://112.5.141.67:81/android/ForgetPassword.php</string>
+    <string name="AboutUs_php">http://112.5.141.67:81/android/aboutus.php</string>
+    <string name="GetGroupBuyingGoogsListLevel_php">http://112.5.141.67:81/android/getGroupBuyingGoogsListLevel.php</string>
+    <string name="GetPaytype_php">http://112.5.141.67:81/micro/android/Paytype.php</string>
+
+    
+    <string name="str_yuanjia">原价%s元</string>
+    <string name="str_test_code">%s折起</string>
+<!-- http://www.365sq.cn -->
+    <!--    
+   <string name="base_url">http://yads.gnway.net:81/</string>
+   <string name="DeleteOrder_http">http://yads.gnway.net:81/android/DeleteOrder.php</string>
+    <string name="getadv_http">http://yads.gnway.net:81/android/getAdvInfo.php</string>
+    <string name="getadvGoodsList_http">http://yads.gnway.net:81/android/getAdvProList.php</string>
+    <string name="register_http">http://yads.gnway.net:81/android/register.php</string>
+    <string name="login_http">http://yads.gnway.net:81/android/login.php</string>
+    <string name="communityGoodsCategoryInfo_http">http://yads.gnway.net:81/android/getCommunityGoodsCategoryInfo.php</string>
+    <string name="getGoodsList_http">http://yads.gnway.net:81/android/getGoodsList.php</string>
+    <string name="getGoodsDetail_http">http://yads.gnway.net:81/android/getGoodsDetail.php</string>
+    <string name="commitComment_http">http://yads.gnway.net:81/android/commitComment.php</string>
+    <string name="getCommentInfo_http">http://yads.gnway.net:81/android/getCommentInfo.php</string>
+    <string name="searchGoodsInfo_http">http://yads.gnway.net:81/android/searchGoogsInfo.php</string>
+    <string name="getHotKeyword_http">http://yads.gnway.net:81/android/getHotKeyword.php</string>
+    <string name="feedback_http">http://yads.gnway.net:81/android/commitIdea.php</string>
+    <string name="insertCollectGoods_http">http://yads.gnway.net:81/android/insertCollectGoods.php</string>
+    <string name="getGroupBuyingGoogsListInfo_http">http://yads.gnway.net:81/android/getGroupBuyingGoogsListInfo.php</string>
+    <string name="getGroupBuyingGoodsCategoryInfo_http">http://yads.gnway.net:81/android/getGroupBuyingGoodsCategoryInfo.php</string>
+    <string name="insertConsigneeAddress_http">http://yads.gnway.net:81/android/insertConsigneeAddress.php</string>
+    <string name="getConsigneeAddress_http">http://yads.gnway.net:81/android/getConsigneeAddress.php</string>
+    <string name="updateConsigneeAddress_http">http://yads.gnway.net:81/android/updateConsigneeAddress.php</string>
+    <string name="deleteConsigneeAddress_http">http://yads.gnway.net:81/android/deleteConsigneeAddress.php</string>
+    <string name="getCollectGoods_http">http://yads.gnway.net:81/android/getCollectGoods.php</string>
+    <string name="deleteCollectGoods_http">http://yads.gnway.net:81/android/deleteCollectGoods.php</string>
+    <string name="getShopsDetailInfo_php">http://yads.gnway.net:81/android/getShopsDetailInfo.php</string>
+    <string name="ModifyPassWord_php">http://yads.gnway.net:81/android/ModifyPassWord.php</string>
+    <string name="ModifyEmail_php">http://yads.gnway.net:81/android/ModifyEmail.php</string>
+    <string name="ModifyPhone_php">http://yads.gnway.net:81/android/ModifyPhone.php</string>
+    <string name="GetAuthCode_php">http://yads.gnway.net:81/android/GetAuthCode.php</string>
+    <string name="GetOrderList_php">http://yads.gnway.net:81/android/GetOrderList.php</string>
+    <string name="GetOrderNumber_php">http://yads.gnway.net:81/android/GetOrderNumber.php</string>
+    <string name="OrderManage_php">http://yads.gnway.net:81/android/OrderManage.php</string>
+    <string name="GetOrderInfo_php">http://yads.gnway.net:81/android/GetOrderInfo.php</string>
+    <string name="UploadOrder_php">http://yads.gnway.net:81/android/UploadOrder.php</string>
+    <string name="GetTN_php">http://yads.gnway.net:81/android/GetTN.php</string>
+    <string name="CheckStorageCount_php">http://yads.gnway.net:81/android/CheckStorageCount.php</string>
+    <string name="CheckPayState_php">http://yads.gnway.net:81/android/CheckPayState.php</string>
+    <string name="GetminPurchasemoney_php">http://yads.gnway.net:81/android/GetminPurchasemoney.php</string>
+    <string name="GetHomemaininfo_php">http://yads.gnway.net:81/android/GetHomemaininfo.php</string>
+    <string name="ForgetPassword_php">http://yads.gnway.net:81/android/ForgetPassword.php</string>
+    <string name="AboutUs_php">http://yads.gnway.net:81/android/aboutus.php</string>
+  --> <!-- pay -->
+    <string name="remote_call_failed">Failure calling remote service</string>
+    <string name="pay_faliure">关闭</string>
+    <string name="pay_success">成功</string>
+    <string name="pay_payment">付款</string>
+    <string name="pay_cash">已下单</string>
+    <string name="pay_close">取消订单</string>
+    <!-- buy -->
+    <string name="buy_option">马上购买</string>
+
+</resources>

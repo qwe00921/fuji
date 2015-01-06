@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_list_mycenter_waitbuyerpay_title"
+        style="@style/bg_top_background"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/btn_list_mycenter_waitbuyerpay_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back"
+            android:focusable="false" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="待买家付款订单" />
+
+        <ImageButton
+            android:id="@+id/btn_list_mycenter_waitbuyerpay_sort"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/state_press_bg_top_right"
+            android:focusable="false"
+            android:src="@drawable/ic_top_right" />
+
+        <ImageView
+            android:id="@+id/iv_mycenter_waitbuyerpay_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+	
+    <ListView
+        android:id="@+id/listview_list_mycenter_waitbuyerpay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_list_mycenter_waitbuyerpay_bottom"
+        android:layout_below="@+id/rl_list_mycenter_waitbuyerpay_title"
+        android:background="#FFFFFF"
+        android:cacheColorHint="@color/white"
+        android:divider="@color/grey"
+        android:dividerHeight="1px"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none" >
+    </ListView>
+	    <LinearLayout
+        android:id="@+id/ll_list_mycenter_waitbuyerpay_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="32dip"
+        android:layout_above="@+id/rl_mycenter_waitbuyerpaylist_bottommenu"
+        android:background="#e1e1e1"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:padding="3dip" >
+
+        <Button
+            android:id="@+id/btn_list_mycenter_waitbuyerpay_allselect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/state_press_btn_deliveryaddressdetails"
+            android:gravity="center"
+            android:padding="3dip"
+            android:text="全     选"
+            android:textColor="@color/black"
+            android:textSize="12dip" />
+
+        <Button
+            android:id="@+id/btn_list_mycenter_waitbuyerpay_bottom_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/state_press_btn_deliveryaddressdetails"
+            android:gravity="center"
+            android:padding="3dip"
+            android:text="删     除"
+            android:textColor="@color/black"
+            android:textSize="12dip" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_waitbuyerpaylist_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

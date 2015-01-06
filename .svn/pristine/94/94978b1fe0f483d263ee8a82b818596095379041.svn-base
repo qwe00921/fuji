@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- 弹出框样式 -->
+  <style name="pop_dialog"  parent="@android:style/Theme.Dialog">
+     <item name="android:windowFrame">@null</item> <!-- 边框 -->
+     <item name="android:windowIsFloating">true</item> <!--是否浮现在Dialog之上  -->
+     <item name="android:windowIsTranslucent">false</item><!-- 半透明 -->
+     <item name="android:windowNoTitle">true</item><!-- 无标题 -->
+     <!--<item name="android:windowBackground">@null</item>  背景透明 -->
+     <item name="android:windowBackground">@drawable/app_uncheck</item>   <!-- 背景透明 -->
+     <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+     <item name="android:windowContentOverlay">@null</item>
+   </style>
+   
+   <!-- 标题背景样式 -->
+   <style name="bg_top_background">
+   	 <item name="android:layout_width">fill_parent</item>
+   	 <item name="android:layout_height">50dip</item>
+   	 <item name="android:background">@drawable/bg_top_new</item>
+   	 <item name="android:textSize">24sp</item>
+   </style>
+   
+   <!-- 首页分隔线 -->
+   <style name="spline_main_draw_horizontal">
+   	 <item name="android:layout_width">fill_parent</item>
+   	 <item name="android:layout_height">0.3dip</item>
+   	 <item name="android:background">@color/grey2</item>
+   </style>
+   <!-- 购物车分隔虚线 -->
+   <style name="spline_shoppingcart_draw_horizontal">
+   	 <item name="android:src">@drawable/line_dotted</item>
+   	 <item name="android:layout_width">fill_parent</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   </style>
+   
+   <!-- LoginButton样式 -->
+   <style name="btn_Login">
+   	 <item name="android:layout_width">fill_parent</item>
+   	 <item name="android:layout_height">45dp</item>
+   	 <item name="android:layout_centerInParent">true</item>
+   	 <item name="android:textColor">@color/white</item>
+   	 <item name="android:textSize">18sp</item>
+   	 <item name="android:layout_marginRight">10dp</item>
+   	 <item name="android:layout_marginLeft">10dp</item>
+   	 <item name="android:background">@drawable/btn_login_448x58</item>
+   </style>
+   
+   <!-- shop red 样式-->
+   <style name="tv_shoppingcart_redwords">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">#d90733</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   
+   
+   <!-- grey title样式   -->
+   <style name="tv_grey_title">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">#777777</item>
+   	 <item name="android:textSize">18sp</item>
+   </style>
+   <!-- describe small 样式   -->
+   <style name="tv_describe_small">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/black_shopping</item>
+   	 <item name="android:textSize">13sp</item>
+   </style>
+   
+   <!-- mycenter firstrank big 样式   -->
+   <style name="tv_mycenter_firstrank_big">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/black_shopping</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   
+   <!-- goods address secondtrank big 样式   -->
+   <style name="tv_mycenter_secondrank_big">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">#777777</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   
+   
+   <!-- table first rank autosize样式   -->
+   <style name="tv_table_firstrank_autosize">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">#777777</item>
+   	 <item name="android:textSize">14sp</item>
+   </style>
+   
+   <!-- table first rank setsize样式   -->
+   <style name="tv_table_firstrank_setsize">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">28dip</item>
+   	 <item name="android:textColor">#777777</item>
+   	 <item name="android:textSize">15sp</item>
+   	 <item name="android:gravity">center_vertical</item>
+   	 <item name="android:layout_marginTop">2.5dip</item>
+   	 <item name="android:layout_marginBottom">2.5dip</item>
+   </style>
+   
+   <!-- table second rank setosize样式   -->
+   <style name="tv_table_secondrank_autosize">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/black_shopping</item>
+   	 <item name="android:textSize">14sp</item>
+   </style>
+   
+   <!-- table second rank setsize样式   -->
+   <style name="tv_table_secondrank_setsize">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">28dip</item>
+   	 <item name="android:textColor">@color/black_shopping</item>
+   	 <item name="android:textSize">15sp</item>
+   	 <item name="android:gravity">center_vertical</item>
+   	 <item name="android:layout_marginTop">2.5dip</item>
+   	 <item name="android:layout_marginBottom">2.5dip</item>
+   </style>
+   
+   <!-- 加载提示图样式 -->
+   <style name="style_iv_load">
+   	 <item name="android:layout_width">40dip</item>
+   	 <item name="android:layout_height">40dip</item>
+   	 <item name="android:background">@drawable/loading</item>
+   	 <item name="android:layout_alignParentRight">true</item>
+   	 <item name="android:layout_centerVertical">true</item>
+   	 <item name="android:layout_marginRight">5dip</item>
+   	 <item name="android:visibility">invisible</item>
+   </style>
+
+   
+   <!-- 标题文本样式 -->
+   <style name="bg_top_text">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:layout_centerInParent">true</item>
+   	 <item name="android:textColor">@color/white</item>
+   	 <item name="android:textSize">20sp</item>
+   </style>
+   <!-- 大号标题、白   -->
+   <style name="font_title_larger_white">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/white</item>
+   	 <item name="android:textSize">18sp</item>
+   </style>
+   <!-- 大号标题、黑   -->
+   <style name="font_title_larger_black">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/black</item>
+   	 <item name="android:textSize">18sp</item>
+   </style>
+   <!-- 大号标题、灰   -->
+   <style name="font_title_larger_gray">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">#777777</item>
+   	 <item name="android:textSize">18sp</item>
+   </style>
+   <!-- 大号标题、红   -->
+   <style name="font_title_larger_red">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/red</item>
+   	 <item name="android:textSize">18sp</item>
+   </style>
+   
+   <!-- 大号内容、白   -->
+   <style name="font_content_larger_white">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/white</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   <!-- 大号内容、黑   -->
+   <style name="font_content_larger_black">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/black</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   <!-- 大号内容、灰   -->
+   <style name="font_content_larger_gray">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">#777777</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   <!-- 大号内容、红   -->
+   <style name="font_content_larger_red">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/red</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+
+   
+   
+   <!-- 中号标题、白   -->
+   <style name="font_title_medium_white">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/white</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   <!-- 中号标题、黑   -->
+   <style name="font_title_medium_black">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/black</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   <!-- 中号标题、灰   -->
+   <style name="font_title_medium_gray">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">#777777</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   <!-- 中号标题、红   -->
+   <style name="font_title_medium_red">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/red</item>
+   	 <item name="android:textSize">16sp</item>
+   </style>
+   
+   <!-- 中号内容、白   -->
+   <style name="font_content_medium_white">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/white</item>
+   	 <item name="android:textSize">14sp</item>
+   </style>
+   <!-- 中号内容、黑   -->
+   <style name="font_content_medium_black">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/black</item>
+   	 <item name="android:textSize">14sp</item>
+   </style>
+   <!-- 中号内容、灰   -->
+   <style name="font_content_medium_gray">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">#777777</item>
+   	 <item name="android:textSize">14sp</item>
+   </style>
+   <!-- 中号内容、红   -->
+   <style name="font_content_medium_red">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/red</item>
+   	 <item name="android:textSize">14sp</item>
+   </style>
+   
+   
+   <!-- 小号标题、白   -->
+   <style name="font_title_small_white">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/white</item>
+   	 <item name="android:textSize">13sp</item>
+   </style>
+   <!--  小号标题、黑   -->
+   <style name="font_title_small_black">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/black</item>
+   	 <item name="android:textSize">13sp</item>
+   </style>
+   <!-- 小号标题、灰   -->
+   <style name="font_title_small_gray">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/grey</item>
+   	 <item name="android:textSize">13sp</item>
+   </style>
+   <!-- 小号标题、红   -->
+   <style name="font_title_small_red">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/red</item>
+   	 <item name="android:textSize">13sp</item>
+   </style>
+   
+   <!-- 小号内容、白   -->
+   <style name="font_content_small_white">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/white</item>
+   	 <item name="android:textSize">11sp</item>
+   </style>
+   <!-- 小号内容、黑   -->
+   <style name="font_content_small_black">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/black</item>
+   	 <item name="android:textSize">11sp</item>
+   </style>
+   <!-- 小号内容、灰   -->
+   <style name="font_content_small_gray">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/grey</item>
+   	 <item name="android:textSize">11sp</item>
+   </style>
+   <!-- 小号内容、红   -->
+   <style name="font_content_small_red">
+   	 <item name="android:layout_width">wrap_content</item>
+   	 <item name="android:layout_height">wrap_content</item>
+   	 <item name="android:textColor">@color/red</item>
+   	 <item name="android:textSize">11sp</item>
+   </style>
+   
+   
+   
+</resources>

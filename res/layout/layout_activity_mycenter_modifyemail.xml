@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_modifyemail_top"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_mycenter_modifyemail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="修改邮箱" >
+        </TextView>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_mycenter_modifyemail_inputemail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_mycenter_modifyemail_top"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dip"
+        android:background="@drawable/input_edit_448x74"
+        android:hint="请输入新邮箱"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btn_mycenter_modifyemail_finish"
+        style="@style/btn_Login"
+        android:layout_below="@+id/et_mycenter_modifyemail_inputemail"
+        android:text="完成" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_modifyemail_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

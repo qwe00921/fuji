@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <TextView
+        android:id="@+id/tv_item_list_mycenter_waitbuyerpay_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dip"
+        android:text="3333333333333" />
+
+    <LinearLayout
+        android:id="@+id/ll_register_nameandpwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_item_list_mycenter_waitbuyerpay_time"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/rl_item_list_mycenter_waitbuyerpay_totalprice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/input_login_top_448x74"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_item_list_mycenter_waitbuyerpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总价："
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_item_list_mycenter_waitbuyerpay_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:text="134"
+                android:textColor="@color/red_price"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_item_list_mycenter_waitbuyerpay_freight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(运费：10.00)"
+                android:textColor="@color/grey"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_middle_448x74"
+            android:padding="10dip"
+            android:orientation="horizontal">
+            
+            <LinearLayout
+                android:id="@+id/ll_item_list_mycenter_waitbuyerpay_check"
+                android:layout_width="wrap_content"
+                android:layout_height="78dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dip"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <ImageView
+                    android:id="@+id/iv_item_list_mycenter_waitbuyerpay_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/input_lable_noselected" />
+            </LinearLayout>
+	        <FrameLayout
+	            android:id="@+id/fl_item_list_mycenter_waitbuyerpay_gallery"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:orientation="horizontal"
+	            >
+	
+	            <HorizontalScrollView
+	                android:id="@+id/sc_item_scrollview1"
+	                android:layout_width="fill_parent"
+	                android:layout_height="fill_parent"
+	                android:fillViewport="true"
+	                android:scrollbars="vertical" >
+	
+	                <LinearLayout
+	                    android:id="@+id/linear_item_list_mycenter_waitbuyerpay_click1"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:orientation="horizontal" >
+	
+	                    <GridView
+	                        android:id="@+id/gv_item_list_mycenter_gridview1"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="76dip"
+	                        android:horizontalSpacing="10dip"
+	                        android:columnWidth="76dip"
+	                        android:scrollbars="horizontal" >
+	                    </GridView>
+	                </LinearLayout>
+	            </HorizontalScrollView>
+	
+	            <RelativeLayout
+	                android:id="@+id/rl_fl_item_list_mycenter_waitbuyerpay_main"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content" >
+	
+	                <ImageView
+	                    android:id="@+id/iv_fl_item_list_mycenter_waitbuyerpay_goods"
+	                    android:layout_width="76dip"
+	                    android:layout_height="78dip"
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_alignParentTop="true"
+	                    android:layout_marginRight="10dip"
+	                    android:src="@drawable/image_load" />
+	
+	                <TextView
+	                    android:id="@+id/tv_fl_item_list_mycenter_waitbuyerpay_describe"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignTop="@+id/iv_fl_item_list_mycenter_waitbuyerpay_goods"
+	                    android:layout_marginBottom="10dp"
+	                    android:layout_toRightOf="@+id/iv_fl_item_list_mycenter_waitbuyerpay_goods"
+	                    android:maxEms="14"
+	                    android:singleLine="false"
+	                    android:text=""
+	                    android:textColor="@color/black_shopping"
+	                    android:textSize="13sp" />
+	
+	                <TextView
+	                    android:id="@+id/tv_fl_item_list_mycenter_waitbuyerpay_price"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignBottom="@+id/iv_fl_item_list_mycenter_waitbuyerpay_goods"
+	                    android:layout_alignParentRight="true"
+	                    android:text="¥88.00"
+	                    android:textColor="@color/black_shopping"
+	                    android:textSize="14sp" />
+	            </RelativeLayout>
+	        </FrameLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_bottom_448x74"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_item_list_mycenter_waitbuyerpay_counts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="共2件商品" />
+			
+            <Button
+                android:id="@+id/btn_item_list_mycenter_waitbuyerpay_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/state_press_btn_deliveryaddressdetails"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="5dip"
+                android:text="确认付款" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

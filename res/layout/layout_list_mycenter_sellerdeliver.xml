@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_list_mycenter_sellerdeliver_title"
+        style="@style/bg_top_background"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/btn_list_mycenter_sellerdeliver_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="待卖家发货订单" />
+
+        <ImageButton
+            android:id="@+id/btn_list_mycenter_deliverorder_sort"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/state_press_bg_top_right"
+            android:src="@drawable/ic_top_right" />
+
+        <ImageView
+            android:id="@+id/iv_mycenter_remindsellerdeliver_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview_list_mycenter_sellerdeliver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_mycenter_remindsellerdeliverlist_bottommenu"
+        android:layout_below="@+id/rl_list_mycenter_sellerdeliver_title"
+        android:background="#FFFFFF"
+        android:cacheColorHint="@color/white"
+        android:divider="@color/grey"
+        android:dividerHeight="1px"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_remindsellerdeliverlist_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

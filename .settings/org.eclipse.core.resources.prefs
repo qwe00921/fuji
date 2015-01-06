@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/com/fsti/fjdicClient/component/AnimationTabHost.java=UTF-8
+encoding//src/com/fsti/fjdicClient/util/DBHelper.java=UTF-8
+encoding//src/com/fsti/fjdicClient/util/asyncUtil/AsyncTaskUtils.java=GBK
+encoding//src/com/fsti/fjdicClient/util/asyncUtil/CallEarliest.java=GBK
+encoding//src/com/fsti/fjdicClient/util/asyncUtil/Callable.java=GBK
+encoding//src/com/fsti/fjdicClient/util/asyncUtil/Callback.java=GBK
+encoding//src/com/fsti/fjdicClient/util/asyncUtil/IProgressListener.java=GBK
+encoding//src/com/fsti/fjdicClient/util/asyncUtil/ProgressCallable.java=GBK
+encoding/<project>=UTF-8

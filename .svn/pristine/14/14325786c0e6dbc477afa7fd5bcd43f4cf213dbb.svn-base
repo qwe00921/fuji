@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dip" >
+
+        <TextView
+            android:id="@+id/tv_shopping_sort_name"
+            style="@style/font_title_medium_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dip"
+            android:text="ddd" />
+
+        <TextView
+            android:id="@+id/tv_item_shopping_right_counts"
+            style="@style/font_content_medium_black"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/iv_arrows"
+            android:text="1"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:background="@drawable/ic_list_more" />
+        <ImageView
+        style="@style/spline_main_draw_horizontal"
+        android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

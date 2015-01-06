@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_modifyphone_top"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_mycenter_modifyphone_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            android:id="@+id/tv_bindphone_title"
+            style="@style/bg_top_text"
+            android:text="绑定手机号码" >
+        </TextView>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_mycenter_modifyphone_inputphone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_mycenter_modifyphone_top"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dip"
+        android:background="@drawable/input_edit_448x74"
+        android:hint="请输入新手机号码"
+        android:inputType="number"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/et_mycenter_modifyphone_inputcode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_mycenter_modifyphone_inputphone"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/input_edit_448x74"
+        android:hint="请输入短信验证码"
+        android:padding="10dip" />
+
+    <Button
+        android:id="@+id/et_mycenter_modifyphone_getcode"
+        style="@style/btn_Login"
+        android:layout_below="@+id/et_mycenter_modifyphone_inputcode"
+        android:text="获取短信验证码" >
+    </Button>
+
+    <Button
+        android:id="@+id/btn_mycenter_modifyphone_finish"
+        style="@style/btn_Login"
+        android:layout_below="@+id/et_mycenter_modifyphone_getcode"
+        android:layout_marginTop="10dip"
+        android:text="完  成" >
+    </Button>
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_modifyphone_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

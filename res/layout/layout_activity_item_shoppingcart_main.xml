@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip" >
+
+        <ImageView
+            android:id="@+id/iv_item_shoppingcart_main_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/input_lable_noselected" />
+
+        <TextView
+            android:id="@+id/tv_item_shoppingcart_main_goodsname"
+            style="@style/font_content_larger_black"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_item_shoppingcart_main_select"
+            android:text="ccc" />
+
+        <ImageView
+            android:id="@+id/iv_item_shoppingcart_shop_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_up_right" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_item_shoppingcart_main_bottomspline"
+        style="@style/spline_shoppingcart_draw_horizontal"
+        android:layout_alignParentBottom="true" />
+    <!--
+   	<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+   		android:id="@+id/ll_item_shoppingcart_main"
+   		android:layout_below="@+id/iv_item_shoppingcart_main_spline">
+   		<RelativeLayout android:layout_width="fill_parent" 
+   			android:layout_height="wrap_content"
+   			android:padding="10dip">
+   			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"  android:textSize="18sp"
+				android:text="欧欧客O~O cake" android:textColor="@color/black_shopping"/>
+			<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:src="@drawable/input_lable_noselected"
+				android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+   		</RelativeLayout>
+   		<ListView android:id="@+id/list_shoppingcart_modify"
+		android:layout_width="fill_parent" android:focusable="true" 
+		android:focusableInTouchMode="true"
+		android:background="#FFFFFF" android:layout_height="wrap_content"></ListView>
+   	</LinearLayout>
+   	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+   		android:text="共 2 件，¥88.00"
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentRight="true"
+   		android:layout_margin="15dip"/>    -->
+
+</RelativeLayout>

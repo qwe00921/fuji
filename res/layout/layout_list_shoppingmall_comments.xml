@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_shoppingmall_commentslist_title"
+        style="@style/bg_top_background"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/btn_list_shoppingmall_comments_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="评价详情" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_shoppingmall_conmentslist_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_shoppingmall_commentslist_title"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="10dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_shoppingmall_commentslist_allcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_leftpress_selected"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btn_shoppingmall_commentslist_greatcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_middlepress_noselected"
+                    android:gravity="center"
+                    android:text="好评"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btn_shoppingmall_commentslist_goodcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_middlepress_noselected"
+                    android:gravity="center"
+                    android:text="中评"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btn_shoppingmall_commentslist_badcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rightpress_noselected"
+                    android:gravity="center"
+                    android:text="差评"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <ImageView
+                style="@style/spline_main_draw_horizontal"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_list_shoppingmall_comments"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_shoppingmall_conmentslist_table"
+        android:text="暂无评价"
+        android:textSize="18dip"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/list_shoppingmall_comments"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_shoppingmall_commentslist_bottommenu"
+        android:layout_below="@+id/tv_list_shoppingmall_comments"
+        android:cacheColorHint="@color/white"
+        android:divider="@drawable/line_dotted"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_shoppingmall_commentslist_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

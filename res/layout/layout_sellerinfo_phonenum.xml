@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" 
+    android:paddingBottom="15dip">
+    <TextView
+        android:id="@+id/tv_groupbuy_sellerinformation_phonedetails"
+        style="@style/tv_describe_small"
+        android:layout_width="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btn_groupbuy_sellerinfo_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_groupbuy_sellerinformation_phonedetails"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_sellerinfo_call" />
+
+
+</RelativeLayout>

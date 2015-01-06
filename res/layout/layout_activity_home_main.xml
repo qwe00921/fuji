@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_homemain_title"
+        style="@style/bg_top_background"
+        android:layout_alignParentTop="true" >
+
+        <!--
+          <LinearLayout
+         android:layout_marginLeft="7dip"
+         android:layout_alignParentLeft="true"
+         android:layout_width="wrap_content"
+         android:layout_height="fill_parent"
+         android:orientation="horizontal"
+         android:gravity="center"
+         android:id="@+id/chooseaddress"
+         >
+         <TextView
+             android:id="@+id/tv_address"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/white"
+             android:textSize="17sp"
+             android:text="福州"
+             android:gravity="center"
+             android:textStyle="bold"
+             >
+             </TextView>
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:scaleType="fitStart"
+                 android:src="@drawable/ic_xia"
+                 >
+                 </ImageView>
+         </LinearLayout>
+        -->
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="福桔装饰" >
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_main_call"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/state_press_bg_top_right"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_groupbuy_sort1"
+                style="@style/font_content_medium_white"
+                android:text="客服" />
+
+            <TextView
+                android:id="@+id/tv_groupbuy_sort2"
+                style="@style/font_content_medium_white"
+                android:text="电话" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_homemain_title"
+        android:layout_above="@+id/rl_homemain_bottommenu"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/scroll_rt_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/linear_main_viewpager_container"
+                android:layout_width="fill_parent"
+                android:layout_height="150dip"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <com.fsti.fjdicClient.activity.home.GalleryFlow
+                    android:id="@+id/gall_homemain_screenGallery"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/gridviewmenu"
+                android:layout_width="fill_parent"
+                android:layout_height="196dip"
+                android:layout_below="@+id/linear_main_viewpager_container"
+                android:layout_marginTop="8dip"
+                android:background="@color/white"
+                android:fadeScrollbars="true"
+                android:gravity="center"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="6dip" >
+            </GridView>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_below="@+id/gridviewmenu"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:layout_marginTop="11dip"
+                android:background="#CFCFCF" >
+            </View>
+
+            <com.fsti.fjdicClient.view.CustomListview
+                android:id="@+id/list_groupbuy_main"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginTop="14dip"
+                android:background="#FFFFFF"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_homemain_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

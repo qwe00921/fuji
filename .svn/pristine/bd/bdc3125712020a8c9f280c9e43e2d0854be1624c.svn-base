@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_goodslist_title"
+        style="@style/bg_top_background"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/btn_groupbuy_goodslist_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            android:id="@+id/tv_groupbuy_goodslist_title"
+            style="@style/bg_top_text"
+            android:text="生活服务列表" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/iv_goodlist_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_groupbuy_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_groupbuy_mainlist_bottommenu"
+        android:layout_below="@+id/rl_groupbuy_goodslist_title"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/grey"
+        android:dividerHeight="1dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_mainlist_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

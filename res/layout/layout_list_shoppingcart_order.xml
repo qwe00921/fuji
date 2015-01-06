@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_list_shoppingcart_order_title"
+        style="@style/bg_top_background"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/btn_shoppingcart_order_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/font_title_larger_white"
+            android:layout_centerInParent="true"
+            android:text="确定订单" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_shoppingcart_order_address2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_list_shoppingcart_order_title"
+        android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/tv_shoppingcart_order_address_cn"
+            style="@style/font_title_medium_black"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="3dip"
+            android:text="收货地址：" />
+
+        <TextView
+            android:id="@+id/tv_shoppingcart_order_address_show"
+            style="@style/font_content_larger_black"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_shoppingcart_order_address_cn"
+            android:layout_marginLeft="3dip" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/ic_bottom_right" >
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_list_shoppingcart_order_countsandprice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_shoppingcart_order_address2"
+        android:padding="5dip" >
+
+        <RelativeLayout
+            android:id="@+id/rl_list_shoppingcart_order_main_goodscount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_lable_460x46_horizontal" >
+
+            <TextView
+                style="@style/font_content_larger_gray"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="商品件数：" />
+
+            <TextView
+                android:id="@+id/tv_list_shoppingcart_order_goodscount"
+                style="@style/font_content_larger_red"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="1件" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_list_shoppingcart_order_main_totalprice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_list_shoppingcart_order_main_goodscount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_lable_460x46_horizontal" >
+
+            <TextView
+                style="@style/font_content_larger_gray"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="总价：" />
+
+            <TextView
+                android:id="@+id/tv_list_shoppingcart_order_toatalprice"
+                style="@style/font_content_larger_red"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="¥130.00" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_list_shoppingcart_order_spline"
+        style="@style/spline_main_draw_horizontal"
+        android:layout_below="@+id/rl_list_shoppingcart_order_countsandprice"
+        android:layout_marginTop="2dip" />
+	<!-- 
+    <ExpandableListView
+        android:id="@+id/elist_shoppingcart_order"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_list_shoppingcart_order_spline"
+        android:background="#FFFFFF"
+        android:cacheColorHint="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none" />
+	 -->
+	<ScrollView
+        android:id="@+id/scroll_shoppingcart_order"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/iv_list_shoppingcart_order_spline"
+        android:scrollbars="none" >
+		<LinearLayout 
+		    android:id="@+id/ll_shoppingcart_order"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical">
+		    
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

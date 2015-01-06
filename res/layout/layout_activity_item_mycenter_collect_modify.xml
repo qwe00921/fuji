@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_item_mycenter_collect_sellername"
+        style="@style/font_title_larger_black"
+        android:layout_width="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:maxEms="14"
+        android:text="hello"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_item_mycenter_collect_modify"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="8dip" >
+
+        <ImageView
+            android:id="@+id/iv_item_mycenter_collect_modify_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/input_lable_noselected" />
+
+        <FrameLayout
+            android:id="@+id/fl_item_mycenter_collect_modify"
+            android:layout_width="100dip"
+            android:layout_height="90dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:layout_toRightOf="@+id/iv_item_mycenter_collect_modify_select"
+            android:background="@color/white" >
+
+            <ImageView
+                android:id="@+id/iv_item_mycenter_collect_modify_goods"
+                android:layout_width="100dip"
+                android:layout_height="90dip"
+                android:layout_gravity="center"
+                android:src="@drawable/image_load" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_item_mycenter_collect_modify_describe"
+            style="@style/font_content_small_black"
+            android:layout_alignTop="@+id/fl_item_mycenter_collect_modify"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/iv_item_mycenter_collect_modify_more"
+            android:layout_toRightOf="@+id/fl_item_mycenter_collect_modify"
+            android:maxEms="14"
+            android:singleLine="false"
+            android:text="罗源香中微肉松（158g/罐）的发生率四度空间"
+            />
+        <TextView
+            android:id="@+id/tv_item_mycenter_collect_modify_originalprice_pre"
+            style="@style/font_content_small_gray"
+            android:layout_alignBottom="@+id/fl_item_mycenter_collect_modify"
+            android:layout_toRightOf="@+id/fl_item_mycenter_collect_modify"
+            android:text="原价" />
+        
+        <TextView
+            android:id="@+id/tv_item_mycenter_collect_modify_originalprice_show"
+            style="@style/font_content_small_gray"
+            android:layout_alignBottom="@+id/fl_item_mycenter_collect_modify"
+            android:layout_toRightOf="@+id/tv_item_mycenter_collect_modify_originalprice_pre"
+            android:text="¥108" />
+
+        <TextView
+            android:id="@+id/tv_item_mycenter_collect_modify_discountedprice"
+            style="@style/font_title_medium_red"
+            android:layout_alignBottom="@+id/fl_item_mycenter_collect_modify"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/tv_item_mycenter_collect_modify_originalprice_show"
+            android:text="¥88.00" />
+
+        <ImageView
+            android:id="@+id/iv_item_mycenter_collect_modify_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_list_more" />
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/spline_main_draw_horizontal"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

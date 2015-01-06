@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_more_moreactivity_title"
+        style="@style/bg_top_background" >
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="更多" >
+        </TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_more_moreactivity_title"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_more_feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/iv_more_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_list_more" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="使用反馈"
+                android:textColor="#000000"
+                android:textSize="15sp" >
+            </TextView>
+        </RelativeLayout>
+
+        <ImageView style="@style/spline_main_draw_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/rl_more_aboutus"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/iv_more_aboutus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_list_more" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="关于我们"
+                android:textColor="#000000"
+                android:textSize="15sp" >
+            </TextView>
+        </RelativeLayout>
+
+        <ImageView style="@style/spline_main_draw_horizontal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_more_moreactivity_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

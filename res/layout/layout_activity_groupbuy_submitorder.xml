@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_submitorder_top"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_groupbuy_submitorder_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="立即购买" >
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_groupbuy_submitorder_bottommenu"
+        android:layout_below="@+id/rl_groupbuy_submitorder_top"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tv_groupbuy_submitorder_order"
+                        style="@style/tv_grey_title"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="3dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="订单信息：" />
+
+                    <TableLayout
+                        android:id="@+id/tl_groupbuy_submitorder_tab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_groupbuy_submitorder_order"
+                        android:shrinkColumns="2"
+                        android:layout_marginLeft="10dip" 
+                        android:layout_marginRight="10dip">
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                    		android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/tv_table_firstrank_setsize"
+                                android:text="名  称" />
+
+                            <TextView
+                                style="@style/tv_table_firstrank_setsize"
+                                android:text="：" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_submitorder_goodsname"
+                                style="@style/tv_table_secondrank_setsize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="false"
+                                android:paddingRight="10dip"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                style="@style/tv_table_firstrank_setsize"
+                                android:text="单  价" />
+
+                            <TextView
+                                style="@style/tv_table_firstrank_setsize"
+                                android:text="：" />
+
+                            <TextView
+                                android:id="@+id/tl_groupbuy_submitorder_perprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="28dip"
+                                android:layout_marginBottom="2.5dip"
+                                android:layout_marginTop="2.5dip"
+                                android:text="¥88.00"
+                                android:textColor="@color/red_price"
+                                android:textSize="15sp" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                style="@style/tv_table_firstrank_setsize"
+                                android:text="数  量" />
+
+                            <TextView
+                                style="@style/tv_table_firstrank_setsize"
+                                android:text="：" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <Button
+                                    android:id="@+id/btn_groupbuy_submitorder_reduction"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/state_select_btn_reduction" />
+
+                                <EditText
+                                    android:id="@+id/et_groupbuy_submitorder_counts"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_margin="3dip"
+                                    android:layout_toRightOf="@+id/btn_groupbuy_submitorder_reduction"
+                                    android:background="@drawable/input_lable"
+                                    android:gravity="center"
+                                    android:inputType="number"
+                                    android:singleLine="true" />
+
+                                <Button
+                                    android:id="@+id/btn_groupbuy_submitorder_add"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/et_groupbuy_submitorder_counts"
+                                    android:background="@drawable/state_select_btn_add" />
+                            </RelativeLayout>
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                style="@style/tv_table_firstrank_setsize"
+                                android:text="总  价" />
+
+                            <TextView
+                                style="@style/tv_table_firstrank_setsize"
+                                android:text="：" />
+
+                            <TextView
+                                android:id="@+id/tl_groupbuy_submitorder_totalprice"
+                                style="@style/tv_table_secondrank_setsize"
+                                android:text="¥88.00" />
+                        </TableRow>
+                    </TableLayout>
+                </RelativeLayout>
+
+                <ImageView style="@style/spline_main_draw_horizontal" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_groupbuy_firmorder_address2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:id="@+id/tv_groupbuy_firmorder_address"
+                        style="@style/tv_grey_title"
+                        android:layout_marginBottom="5dp"
+                        android:text="收货地址：" />
+
+                    <TextView
+                        android:id="@+id/t11"
+                        style="@style/tv_describe_small"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_groupbuy_firmorder_address"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="5dip"
+                        android:text="姓名："
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_groupbuy_address_buyername"
+                        style="@style/tv_describe_small"
+                        android:layout_below="@+id/tv_groupbuy_firmorder_address"
+                        android:layout_marginBottom="10dip"
+                        android:layout_toRightOf="@+id/t11"
+                        android:text=""
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/t22"
+                        style="@style/tv_describe_small"
+                        android:layout_below="@+id/tv_groupbuy_firmorder_address"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="20dip"
+                        android:layout_toRightOf="@+id/tv_groupbuy_address_buyername"
+                        android:text="电话："
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_groupbuy_address_buyerphone"
+                        style="@style/tv_describe_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tv_item_mycenter_address_buyername"
+                        android:layout_below="@+id/tv_groupbuy_firmorder_address"
+                        android:layout_marginBottom="10dip"
+                        android:layout_toRightOf="@+id/t22"
+                        android:text=""
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/t33"
+                        style="@style/tv_describe_small"
+                        android:layout_below="@+id/t11"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="5dip"
+                        android:text="收货地址："
+                        android:textColor="#777777"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_groupbuy_address_detail"
+                        style="@style/tv_describe_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t11"
+                        android:layout_marginBottom="10dip"
+                        android:layout_toRightOf="@+id/t33"
+                        android:ellipsize="end"
+                        android:maxLength="18"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/ic_bottom_right" >
+                    </ImageView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_groupbuy_submitorder_receivephone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:id="@+id/tv_groupbuy_submitorder_phonetitle"
+                        style="@style/tv_grey_title"
+                        android:layout_centerVertical="true"
+                        android:text="接收手机号：" />
+
+                    <EditText
+                        android:id="@+id/et_groupbuy_submitorder_setphone"
+                        style="@style/tv_grey_title"
+                        android:layout_alignBottom="@+id/tv_groupbuy_submitorder_phonetitle"
+                        android:layout_marginRight="18dp"
+                        android:layout_toRightOf="@+id/tv_groupbuy_submitorder_phonetitle"
+                        android:background="@null"
+                        android:hint="请输入手机号"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:minWidth="100dip"
+                        android:textSize="14sp" >
+                    </EditText>
+                </RelativeLayout>
+
+                <ImageView style="@style/spline_main_draw_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:id="@+id/tv_groupbuy_firmorder_note"
+                        style="@style/tv_grey_title"
+                        android:layout_marginBottom="3dip"
+                        android:text="附注留言" />
+
+                    <EditText
+                        android:id="@+id/et_groupbuy_submitorder_notedetail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dip"
+                        android:layout_below="@+id/tv_groupbuy_firmorder_note"
+                        android:background="@drawable/input_edit_draw"
+                        android:hint="选填，可以写您对商品的其他要求"
+                        android:paddingLeft="5dip"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <ImageView style="@style/spline_main_draw_horizontal" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip" >
+
+                    <Button
+                        android:id="@+id/btn_groupbuy_submitorder_uporder"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/state_press_btn_deliveryaddressdetails"
+                        android:gravity="center"
+                        android:padding="5dip"
+                        android:text="下一步"
+                        android:textColor="@color/black_shopping"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_submitorder_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

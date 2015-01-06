@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/groupbuy_detail_1"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_groupbuy_groupbuydetail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="团购详情" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_groupbuy_groupbuydetail_collect"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/state_press_btn_top_collect" />
+
+        <ImageView
+            android:id="@+id/iv_groupbuydetail_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+    <!--
+	<android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_main_adv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />-->
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_groupbuydetail_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+    <TextView 
+        android:id="@+id/tv_group_loaderror"
+        style = "@style/font_content_larger_black"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="很抱歉，返回数据异常,请重新请求。"
+        />
+    <ScrollView
+        android:id="@+id/scroll_groupdetail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_groupbuy_groupbuydetail_bottommenu"
+        android:layout_below="@+id/groupbuy_detail_1"
+        android:fillViewport="true"
+        android:visibility="gone"
+        android:scrollbars="vertical" 
+        >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="13dip"
+            android:paddingRight="13dip"
+            android:paddingTop="5dip" >
+
+            <LinearLayout
+                android:id="@+id/ll_groupbuy_groupbuydetail_viewpager_container"
+                android:layout_width="fill_parent"
+                android:layout_height="140dip"
+                android:background="@color/white" >
+
+                <!--
+   				 <com.fsti.communityClient.component.EventLinearLayout
+					 android:id="@+id/viewpager1" android:layout_width="fill_parent"
+		 			 android:background="@color/grey"
+					 android:layout_height="140dip" >
+				</com.fsti.communityClient.component.EventLinearLayout>				-->
+                <ViewFlipper
+                    android:id="@+id/viewflipper_main_container_groupbuy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/group_detail_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_groupbuy_groupbuydetail_viewpager_container"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/bg_lable_group"
+                android:padding="3dip" >
+
+                <TextView
+                    android:id="@+id/tv_groupbuy_groupbuydetail_nowprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/btn_groupbuy_groupbuydetail_buy"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dip"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_groupbuy_groupbuydetail_nowprice"
+                    android:layout_marginLeft="2dip"
+                    android:layout_toLeftOf="@+id/tv_groupbuy_groupbuydetail_oldprice"
+                    android:layout_toRightOf="@+id/tv_groupbuy_groupbuydetail_nowprice"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_groupbuy_groupbuydetail_oldprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_groupbuy_groupbuydetail_nowprice"
+                    android:layout_marginRight="5dip"
+                    android:layout_toLeftOf="@+id/btn_groupbuy_groupbuydetail_buy"
+                    android:text="原价：0元"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_groupbuy_groupbuydetail_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/state_select_btn_bottom_buy"
+                    android:gravity="center"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="25dip"
+                    android:paddingRight="25dip"
+                    android:paddingTop="5dip"
+                    android:text="立即抢购"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/group_detail_2"
+                android:orientation="vertical"
+                android:paddingLeft="13dip"
+                android:paddingRight="13dip"
+                android:paddingTop="5dip" >
+
+                <TextView
+                    android:id="@+id/tv_groupbuy_groupbuydetail_goodsname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text=""
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_groupbuy_groupbuydetail_groupbuystate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_groupbuy_groupbuydetail_goodsname"
+                    android:layout_below="@+id/tv_groupbuy_groupbuydetail_goodsname"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="0.75"
+                    android:text="生活团全场产品免运费！订购时请务必填写可正常接收短信的手机号码与准确门牌地址信息"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_groupbuy_groupbuydetail_groupbuystate"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dip"
+                        android:layout_marginTop="5dip"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_login_top_448x74"
+                            android:paddingRight="10dp" >
+
+                            <ImageView
+                                android:id="@+id/iv_groupbuy_groupbuydetail_buyercount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dip"
+                                android:src="@drawable/ic_group_people" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_groupbuydetail_buyercount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dip"
+                                android:layout_toRightOf="@+id/iv_groupbuy_groupbuydetail_buyercount"
+                                android:text="0人"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/tv_groupbuy_groupbuydetail_buyercount"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/tv_groupbuy_groupbuydetail_buyercount"
+                                android:text="已购买"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_groupbuy_groupbuydetail_buytime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="3dip"
+                                android:layout_toLeftOf="@+id/tv_groupbuy_groupbuydetail_timeday"
+                                android:src="@drawable/ic_group_time" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_groupbuydetail_timeday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/iv_groupbuy_groupbuydetail_buytime"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tv_groupbuy_groupbuydetail_day"
+                                android:text="00"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_groupbuydetail_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/iv_groupbuy_groupbuydetail_buytime"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tv_groupbuy_groupbuydetail_timehour"
+                                android:text="天"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_groupbuydetail_timehour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/iv_groupbuy_groupbuydetail_buytime"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tv_groupbuy_groupbuydetail_hour"
+                                android:text="00"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_groupbuydetail_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/iv_groupbuy_groupbuydetail_buytime"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tv_groupbuy_groupbuydetail_timeminute"
+                                android:text="时"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_groupbuydetail_timeminute"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/iv_groupbuy_groupbuydetail_buytime"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tv_groupbuy_groupbuydetail_minute"
+                                android:text="00"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_groupbuydetail_minute"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/iv_groupbuy_groupbuydetail_buytime"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tv_groupbuy_groupbuydetail_timesecond"
+                                android:text="分"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_groupbuydetail_timesecond"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/iv_groupbuy_groupbuydetail_buytime"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tv_groupbuy_groupbuydetail_second"
+                                android:text="00"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tv_groupbuy_groupbuydetail_second"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/iv_groupbuy_groupbuydetail_buytime"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:text="秒"
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ll_groupbuy_groupbuydetail_goodsdetail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_login_middle_448x74"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:text="商品详情"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/ic_bottom_right" >
+                        </ImageView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ll_groupbuy_groupbuydetail_commentsdetail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_login_middle_448x74"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:text="评价详情"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/ic_bottom_right" >
+                        </ImageView>
+                    </RelativeLayout>
+                    
+                    <RelativeLayout
+                        android:id="@+id/ll_groupbuy_groupbuydetail_sellerdetail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:background="@drawable/input_login_bottom_448x74"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:text="商家信息"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/ic_bottom_right" >
+                        </ImageView>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

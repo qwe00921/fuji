@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_addressdetail_title"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_mycenter_addressdetail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="收货地址详情" >
+        </TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_deliveryaddressdetails"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_mycenter_addressdetail_title"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_top_448x74"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_addressmodify_name"
+                style="@style/tv_mycenter_firstrank_big"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="收货人姓名：" />
+
+            <TextView
+                android:id="@+id/tv_addressmodify_name1"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="李晓明" />
+
+            <EditText
+                android:id="@+id/et_addressmodify_name2"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_width="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_addressmodify_name"
+                android:background="@null"
+                android:hint="请输入收货人姓名"
+                android:text="李晓明"
+                android:visibility="gone" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_middle_448x74"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_addressmodify_phone"
+                style="@style/tv_mycenter_firstrank_big"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="手机号码：" />
+
+            <TextView
+                android:id="@+id/tv_addressmodify_phone1"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="18905911234" />
+
+            <EditText
+                android:id="@+id/et_addressmodify_phone2"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_width="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_addressmodify_phone"
+                android:background="@null"
+                android:hint="请输入收货人手机号"
+                android:inputType="number"
+                android:text="18905911234"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_middle_448x74"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_addressmodify_Postalcode"
+                style="@style/tv_mycenter_firstrank_big"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="邮政编码：" />
+
+            <TextView
+                android:id="@+id/tv_addressmodify_Postalcode1"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="360001" />
+
+            <EditText
+                android:id="@+id/et_addressmodify_Postalcode2"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_width="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_addressmodify_Postalcode"
+                android:background="@null"
+                android:hint="请输入收货人邮编"
+                android:inputType="number"
+                android:text="360001"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_login_bottom_448x74"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/tv_addressmodify_address"
+                style="@style/tv_mycenter_firstrank_big"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:text="详细地址：" />
+
+            <TextView
+                android:id="@+id/tv_addressmodify_address1"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="70dip"
+                android:gravity="top|right"
+                android:maxEms="18"
+                android:singleLine="false"
+                android:text="福建省福州市鼓楼区东街22号新华都8楼812#" />
+
+            <EditText
+                android:id="@+id/et_addressmodify_address2"
+                style="@style/tv_mycenter_secondrank_big"
+                android:layout_width="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tv_addressmodify_address"
+                android:background="@null"
+                android:hint="请输入收货人地址"
+                android:maxEms="18"
+                android:singleLine="false"
+                android:text="福建省福州市鼓楼区东街22号新华都8楼812#"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_deliveryaddressdetails_tohome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ll_deliveryaddressdetails"
+        android:layout_alignRight="@+id/ll_deliveryaddressdetails"
+        android:layout_below="@+id/ll_deliveryaddressdetails"
+        android:layout_marginTop="8dip"
+        android:background="@drawable/state_press_btn_deliveryaddressdetails"
+        android:gravity="center"
+        android:padding="6dip"
+        android:text="设置成默认收货地址"
+        android:textColor="@color/black_shopping"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_mycenter_addressdetail_modify"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ll_deliveryaddressdetails"
+        android:layout_alignRight="@+id/ll_deliveryaddressdetails"
+        android:layout_below="@+id/btn_deliveryaddressdetails_tohome"
+        android:layout_marginTop="8dip"
+        android:background="@drawable/state_press_btn_deliveryaddressdetails"
+        android:gravity="center"
+        android:padding="6dip"
+        android:text="编辑收货地址"
+        android:textColor="@color/black_shopping"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_deliveryaddressdetails_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_mycenter_addressmodify_bottommenu"
+        android:layout_alignLeft="@+id/ll_deliveryaddressdetails"
+        android:layout_alignRight="@+id/ll_deliveryaddressdetails"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="8dip"
+        android:background="@drawable/state_press_btn_deliveryaddressdetails"
+        android:gravity="center"
+        android:padding="6dip"
+        android:text="删除收货地址"
+        android:textColor="@color/black_shopping"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_addressmodify_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

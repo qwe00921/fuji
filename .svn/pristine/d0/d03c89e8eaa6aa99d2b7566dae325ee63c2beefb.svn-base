@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_more_feedback_title"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_feedback_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="使用反馈" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_feedback_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/state_press_bg_top_right"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_more_feedback_bottommenu"
+        android:layout_below="@+id/rl_more_feedback_title"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dip" >
+
+        <EditText
+            android:id="@+id/et_feedback_say"
+            android:layout_width="300dip"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/input_edit_448x74"
+            android:gravity="left|top"
+            android:hint="我来说两句"
+            android:singleLine="false" >
+        </EditText>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="15dp"
+            tools:ignore="UselessLeaf" >
+
+            <TextView
+                android:id="@+id/tv_feedback_rest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingRight="9dp"
+                android:paddingTop="0dp"
+                android:text="140"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_more_feedback_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_registerTitle"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_register_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="注册" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/iv_register_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/relativeLayout_registerTitle"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_register_nameandpwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dip" >
+                <RelativeLayout 
+                    android:id="@+id/rl_login11"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@drawable/input_login_top_448x74"
+                    >
+                    
+                    <TextView 
+                        android:id="@+id/tv_register_username"
+                        style="@style/font_title_medium_black"
+                        android:text="用户名:"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                      />
+	                <EditText
+	                    android:id="@+id/et_register_username"
+	                    style="@style/font_title_medium_black"
+	                    android:layout_toRightOf="@+id/tv_register_username"
+	                    android:layout_width="fill_parent"
+	                    android:hint="请输入用户名"
+	                    android:background="@null" 
+	                    android:layout_centerVertical="true"
+	                     >
+	                </EditText>
+                </RelativeLayout>
+
+				<RelativeLayout 
+                    android:id="@+id/rl_login12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:background="@drawable/input_login_middle_448x74"
+                    >
+	                 <TextView 
+                        android:id="@+id/tv_register_pass"
+                        style="@style/font_title_medium_black"
+                        android:text="密码："
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                      />
+	                <EditText
+	                    android:id="@+id/et_register_password"
+	                    style="@style/font_title_medium_black"
+	                    android:layout_width="fill_parent"
+	                    android:layout_toRightOf="@+id/tv_register_pass"
+	                    android:hint="请输入密码"
+	                    android:background="@null" 
+	                    android:layout_centerVertical="true"
+	                    android:password="true" >
+	                </EditText>
+                </RelativeLayout>
+				<RelativeLayout 
+                    android:id="@+id/rl_login13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:background="@drawable/input_login_middle_448x74"
+                    >
+	                 <TextView 
+                        android:id="@+id/tv_register_passagain"
+                        style="@style/font_title_medium_black"
+                        android:text="重复密码："
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                      />
+	                <EditText
+	                    android:id="@+id/et_register_passwordagain"
+	                    style="@style/font_title_medium_black"
+	                    android:layout_width="fill_parent"
+	                   	android:background="@null" 
+	                    android:layout_centerVertical="true"
+	                    android:layout_toRightOf="@+id/tv_register_passagain"
+	                    android:hint="请再次输入密码"
+	                    android:password="true" />
+                </RelativeLayout>
+				<RelativeLayout 
+                    android:id="@+id/rl_login14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:background="@drawable/input_login_middle_448x74"
+                    >
+	                 <TextView 
+                        android:id="@+id/tv_register_email"
+                        style="@style/font_title_medium_black"
+                        android:text="邮箱："
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                      />
+	                <EditText
+	                    android:id="@+id/et_register_email"
+	                    style="@style/font_title_medium_black"
+	                    android:layout_width="fill_parent"
+	                   	android:background="@null" 
+	                    android:layout_centerVertical="true"
+	                    android:layout_toRightOf="@+id/tv_register_email"
+	                    android:hint="请输入您的邮箱"
+	                     >
+	                </EditText>
+                </RelativeLayout>
+				<RelativeLayout 
+                    android:id="@+id/rl_login15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:background="@drawable/input_login_bottom_448x74"
+                    >
+	                 <TextView 
+                        android:id="@+id/tv_register_phone"
+                        style="@style/font_title_medium_black"
+                        android:text="手机："
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                      />
+	                <EditText
+	                    android:id="@+id/et_register_phone"
+	                    style="@style/font_title_medium_black"
+	                    android:layout_width="fill_parent"
+	                   	android:background="@null" 
+	                    android:layout_centerVertical="true"
+	                    android:layout_toRightOf="@+id/tv_register_phone"
+	                    android:hint="选填，找回密码时需要"
+	                    android:inputType="number"
+	                    >
+	                </EditText>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register_finish"
+                style="@style/btn_Login"
+                android:text="完成" >
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+<RelativeLayout android:id="@+id/rl_login_register_bottommenu"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"	
+		android:layout_alignParentBottom="true"
+		>
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">
+        Non focused states 
+     <item android:state_focused="false" android:state_selected="false" android:state_pressed="false" android:drawable="@drawable/tab_90x77_contact_normal" />
+     <item android:state_focused="false" android:state_selected="true" android:state_pressed="false" android:drawable="@drawable/tab_90x77_contact_press" />
+   Pressed 
+     <item android:state_focused="false" android:state_selected="false" android:state_pressed="true" android:drawable="@drawable/tab_90x77_contact_press" />
+</selector>
+
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Non focused states -->
+  <item android:state_pressed="false" android:drawable="@drawable/btn_top_shopping_new" />
+  <!-- Pressed -->
+  <item android:state_pressed="true" android:drawable="@drawable/btn_top_shopping_press_new" />
+</selector>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_goodsdetail_title"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_groupbuy_goodsdetail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="团购商品详情" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_groupbuy_goodsdetail_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/state_press_btn_top_collect" />
+
+        <ImageView
+            android:id="@+id/iv_groupbuy_goodsdetail_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_groupbuy_gooddetail_bottommenu"
+        android:layout_below="@+id/rl_groupbuy_goodsdetail_title"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <TextView
+            android:id="@+id/tv_groupbuy_goodsdetail_describe"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dip"
+            android:text=""
+            android:textColor="@color/black_shopping"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_gooddetail_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

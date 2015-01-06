@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_forgetpwd_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="忘记密码" >
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_above="@+id/rl_login_forgetpassword_bottommenu"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+			 <RelativeLayout 
+                android:id="@+id/rl_forget11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/input_edit_448x74"
+                >
+	              <TextView 
+	                    android:id="@+id/tv_login_pass"
+	                    style="@style/font_title_medium_black"
+	                    android:text="手机："
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginRight="5dip"
+	                  />
+		        <EditText
+		            android:id="@+id/et_forgetpwd_phonenum"
+		            style="@style/font_title_medium_black"
+                	android:layout_width="fill_parent"
+               		android:background="@null" 
+                 	android:layout_centerVertical="true"
+                 	android:layout_toRightOf="@+id/tv_login_pass"
+		            android:hint="请输入注册手机号码"
+		            android:inputType="number"
+		            />
+         </RelativeLayout>
+         <RelativeLayout 
+                android:id="@+id/rl_forget12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_forget11"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/input_edit_448x74"
+                >
+	              <TextView 
+	                    android:id="@+id/tv_login_pass"
+	                    style="@style/font_title_medium_black"
+	                    android:text="验证码："
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginRight="5dip"
+	                  />
+		        <EditText
+		            android:id="@+id/et_forgetpwd_checkcode"
+		            style="@style/font_title_medium_black"
+                	android:layout_width="fill_parent"
+               		android:background="@null" 
+                 	android:layout_centerVertical="true"
+                 	android:layout_toRightOf="@+id/tv_login_pass"
+	                android:hint="请输入短信验证码"
+		            android:password="true" 
+		            />
+         </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_forgetpwd_obtaincode"
+                style="@style/btn_Login"
+                android:layout_below="@+id/rl_forget12"
+                android:layout_marginTop="15dp"
+                android:text="获取短信验证码" >
+            </Button>
+
+            <LinearLayout
+                android:id="@+id/ll_name_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_forgetpwd_obtaincode"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:orientation="vertical" >
+				<RelativeLayout 
+	                android:id="@+id/rl_forget13"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:padding="10dp"
+	                android:background="@drawable/input_login_top_448x74"
+	                >
+	              <TextView 
+	                    android:id="@+id/tv_forgetpwd_username"
+	                    style="@style/font_title_medium_black"
+	                    android:text="用户名："
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_centerVertical="true"
+	                    android:layout_marginRight="5dip"
+	                  />
+	             <EditText
+			            android:id="@+id/et_forgetpwd_username"
+			            style="@style/font_title_medium_black"
+	                	android:layout_width="fill_parent"
+	               		android:background="@null" 
+	                 	android:layout_centerVertical="true"
+	                 	android:layout_toRightOf="@+id/tv_forgetpwd_username"
+	        			android:hint="请输入用户名"
+	        		/>
+	            </RelativeLayout>
+	            <RelativeLayout 
+	                android:id="@+id/rl_forget14"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:padding="10dp"
+	                android:background="@drawable/input_login_bottom_448x74"
+	                >
+		              <TextView 
+		                    android:id="@+id/tv_forgetpwd_pass"
+		                    style="@style/font_title_medium_black"
+		                    android:text="密码："
+		                    android:layout_alignParentLeft="true"
+		                    android:layout_centerVertical="true"
+		                    android:layout_marginRight="5dip"
+		                  />
+			        <EditText
+			            android:id="@+id/et_forgetpwd_password"
+			            style="@style/font_title_medium_black"
+	                	android:layout_width="fill_parent"
+	               		android:background="@null" 
+	                 	android:layout_centerVertical="true"
+	                 	android:layout_toRightOf="@+id/tv_forgetpwd_pass"
+			            android:hint="请输入新密码"
+			            android:password="true" 
+			            />
+         		</RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_forgetpwd_finish"
+                style="@style/btn_Login"
+                android:layout_below="@+id/ll_name_pwd"
+                android:layout_marginTop="15dp"
+                android:text="完成" >
+            </Button>
+        </RelativeLayout>
+    </ScrollView>
+<RelativeLayout android:id="@+id/rl_login_forgetpassword_bottommenu"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"	
+		android:layout_alignParentBottom="true"
+		>
+	</RelativeLayout>
+</RelativeLayout>

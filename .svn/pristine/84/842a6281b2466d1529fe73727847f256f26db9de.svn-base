@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_mycenter_address_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="收货地址列表" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_mycenter_address_addaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/state_press_bg_top_right"
+            android:text="新地址"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_addresslist_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_mycenter_address"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rl_mycenter_addresslist_bottommenu"
+        android:layout_below="@+id/rl_1"
+        android:background="#FFFFFF"
+        android:cacheColorHint="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_addresslist_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

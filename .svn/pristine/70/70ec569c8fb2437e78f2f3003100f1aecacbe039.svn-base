@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewpager_navigation_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.fsti.fjdicClient.activity.home.GalleryFlow
+        android:id="@+id/screenGallery"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:gravity="center_vertical" />
+    <!--
+		<android.support.v4.view.ViewPager
+			android:id="@+id/viewpager" android:layout_width="fill_parent"
+			android:layout_height="fill_parent"/>
+		<com.fsti.communityClient.component.EventTextView
+		 android:id="@+id/viewpager1" android:layout_width="fill_parent"
+		 	android:text="dddddddddd"
+			android:layout_height="140dip" >
+		</com.fsti.communityClient.component.EventTextView>    -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:layout_gravity="bottom"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="模板字体"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title" >
+
+            <LinearLayout
+                android:id="@+id/dotViewGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

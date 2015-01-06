@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/rl_shoppingmall_buynow_freight_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dip"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_shoppingmall_firmorder_freightchose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="15dip"
+            android:src="@drawable/input_lable_noselected" />
+
+        <TextView
+            android:id="@+id/tv_shoppingmall_firmorder_freightname"
+            style="@style/font_content_medium_black"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_toRightOf="@+id/iv_shoppingmall_firmorder_freightchose" />
+
+        <TextView
+            android:id="@+id/tv_shoppingmall_firmorder_freight"
+            style="@style/font_content_medium_red"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout><!--
+ <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" 
+    android:orientation="horizontal"
+    >
+
+        <ImageView
+            android:id="@+id/iv_shoppingmall_firmorder_freightchose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_weight="2"
+           android:src="@drawable/input_lable_noselected"/>
+    
+
+        <TextView
+            android:id="@+id/tv_shoppingmall_firmorder_freightname"
+            android:layout_centerVertical="true"
+		    style="@style/font_title_medium_black" 
+		    android:layout_marginRight="10dip"
+		     android:layout_weight="1"
+            />
+      <TextView
+            android:id="@+id/tv_shoppingmall_firmorder_freight"
+            android:layout_centerVertical="true"
+		    style="@style/font_title_medium_red" 
+		     android:layout_weight="1"
+		    
+            />
+
+</LinearLayout>-->

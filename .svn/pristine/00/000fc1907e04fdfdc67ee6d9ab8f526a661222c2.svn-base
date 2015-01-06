@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_more_aboutus_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_aboutus_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="关于我们" >
+        </TextView>
+        <ImageView
+            android:id="@+id/iv_aboutus_loading"
+            style="@style/style_iv_load" 
+            />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_above="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        android:src="@drawable/icon" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/font_title_medium_black"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:text="CommunityClient"
+        android:visibility="gone"
+         />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/font_title_small_black"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:text="Version 1.1.0 (Build 2012.12.24)" />
+
+    <Button
+        android:id="@+id/about_phone_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/state_select_btn_bottom_nextstep"
+        android:gravity="center"
+        android:text="400-003-6539"
+        android:visibility="gone"
+        android:textColor="@color/black_shopping" />
+
+    <ImageView
+        android:id="@+id/iv_aboutus_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/about_phone_btn"
+        android:layout_alignLeft="@+id/about_phone_btn"
+        android:layout_alignTop="@+id/about_phone_btn"
+        android:paddingLeft="20dp"
+        android:visibility="gone"
+        android:src="@drawable/btn_sellerinfo_call" />
+
+    <TextView
+        android:id="@+id/tv_company"
+        style="@style/font_title_medium_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/about_addr"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:text="福建星辉建筑装饰工程有限公司" />
+
+    <TextView
+        android:id="@+id/about_addr"
+        style="@style/font_content_small_gray"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:text="福州市台江区排尾路328号宏洋大厦A区5F" />
+
+</RelativeLayout>

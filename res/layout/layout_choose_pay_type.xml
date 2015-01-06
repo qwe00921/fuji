@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:text="选择支付方式"
+        android:textColor="@color/text_color1"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_white_right_angle_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ly_space3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:padding="5dp" >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:background="@drawable/iv_unionpay"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="银联支付"
+                    android:textColor="@color/text_color2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支持储蓄卡信用卡，无需开通网银"
+                    android:textColor="@color/text_color1"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb_pay_yl"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left|center"
+                android:background="@drawable/pay_type_selector"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="false"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/iv_vertical_line" />
+
+        <LinearLayout
+            android:id="@+id/ly_space4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:padding="5dp" >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:background="@drawable/iv_alipay"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付宝支付"
+                    android:textColor="@color/text_color2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推荐有支付宝账号者使用"
+                    android:textColor="@color/text_color1"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb_pay_zfb"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left|center"
+                android:background="@drawable/pay_type_selector"
+                android:button="@null"
+                android:checked="false"
+                android:clickable="false"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/iv_vertical_line" />
+
+        <LinearLayout
+            android:id="@+id/ly_space5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:background="@drawable/iv_unionpay"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="货到付款"
+                    android:textColor="@color/text_color2"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="先送货后付款"
+                    android:textColor="@color/text_color1"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RadioButton
+                android:id="@+id/rb_pay_hdfk"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left|center"
+                android:background="@drawable/pay_type_selector"
+                android:button="@null"
+                android:checked="false"
+                android:clickable="false"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

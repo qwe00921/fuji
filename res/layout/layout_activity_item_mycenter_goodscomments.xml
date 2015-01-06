@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_item_mycenter_goodscomments_main"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip" >
+
+        <ImageView
+            android:id="@+id/iv_item_mycenter_goodscomments_goods"
+            android:layout_width="72dip"
+            android:layout_height="78dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/image_load" />
+
+        <TextView
+            android:id="@+id/tv_item_mycenter_goodscomments_main_describe"
+            style="@style/font_title_small_black"
+            android:layout_alignTop="@+id/iv_item_mycenter_goodscomments_goods"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/iv_item_mycenter_goodscomments_goods"
+            android:layout_toLeftOf="@+id/tv_item_mycenter_goodscomments_main_amount"
+            android:maxEms="14"
+            android:singleLine="false"
+            android:text="0123456789abcde"
+            android:textColor="@color/black_shopping"
+            />
+		
+                
+        <TextView
+            android:id="@+id/tv_item_mycenter_goodscomments_main_amount"
+            style="@style/font_title_small_red"
+            android:visibility="gone"
+            android:layout_alignTop="@+id/iv_item_mycenter_goodscomments_goods"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:layout_marginLeft="20dip"
+            />
+                
+        <TextView
+            android:id="@+id/tv_item_mycenter_goodscomments_main_price"
+            style="@style/font_title_small_black"
+            android:layout_alignBottom="@+id/iv_item_mycenter_goodscomments_goods"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:textColor="@color/black_shopping"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_item_mycenter_goodscomments_spline"
+        style="@style/spline_main_draw_horizontal"
+        android:layout_below="@+id/rl_item_mycenter_goodscomments_main" />
+
+</RelativeLayout>

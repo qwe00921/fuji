@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="bule">#bb3D8CB8</color>
+	<color name="white">#ffffff</color>
+	<color name="grey">#808A87 </color>
+	<color name="grey2">#CFCFCF</color>
+	<color name="red">#d00000</color>
+	<color name="black">#000000</color>
+	<color name="black_shopping">#111111</color>
+	<color name="red_price">#d90733</color>
+	<color name="yellow_btn">#FFFF00</color>
+	<color name="maincolor">#ff7d05</color>
+	
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_sellerinformation_title"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_groupbuy_sellerinformation_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="商家信息" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/iv_sellerinfo_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+    <TextView 
+			    android:id="@+id/tv_seller_nomsg"
+			    android:layout_height="wrap_content"
+			    android:layout_width="wrap_content"
+			    android:text="很抱歉，暂无此商家信息。"
+			    android:textColor="@color/black"
+			    android:textSize="18sp"
+			    android:visibility="gone"
+			    android:layout_centerInParent="true"/>
+    <ScrollView
+        android:id="@+id/scroll_seller_mid"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_groupbuy_sellerinfo_bottommenu"
+        android:layout_below="@+id/rl_groupbuy_sellerinformation_title"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+			
+            <TextView
+                android:id="@+id/tv_groupbuy_sellerinformation_sellername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10dip"
+                android:text=""
+                android:textColor="@color/black_shopping"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/img_groupbuy_sellerinfo_sellerlogo"
+                android:layout_width="fill_parent"
+                android:layout_height="70dip"
+                android:src="@drawable/image_load"
+                android:layout_below="@+id/tv_groupbuy_sellerinformation_sellername"
+                android:layout_marginBottom="10dip" />
+            <!--
+        <LinearLayout android:id="@+id/ll_groupbuy_sellerinformation_map" 
+		android:background="@drawable/img_default_480x290"
+		android:layout_width="fill_parent" android:layout_height="140dip">            -->
+            <!--
+    <com.fsti.communityClient.component.EventLinearLayout
+		 android:id="@+id/viewpager1" android:layout_width="fill_parent"
+		 	android:background="@color/grey"
+			android:layout_height="140dip" >
+		</com.fsti.communityClient.component.EventLinearLayout>            -->
+
+            <ImageView style="@style/spline_main_draw_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/rl_groupbuy_sellerinformation_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip" >
+
+                <TextView
+                    android:id="@+id/tv_groupbuy_sellerinformation_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dip"
+                    android:text="地址:"
+                    android:textColor="@color/grey"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_groupbuy_sellerinformation_addressdetails"
+                    style="@style/tv_describe_small"
+                    android:layout_alignTop="@+id/tv_groupbuy_sellerinformation_address"
+                    android:layout_marginBottom="10dip"
+                    android:layout_toRightOf="@+id/tv_groupbuy_sellerinformation_address"
+                    android:text="" />
+            </RelativeLayout>
+
+            <ImageView style="@style/spline_main_draw_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/rl_groupbuy_sellerinformation_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip" >
+
+                <TextView
+                    android:id="@+id/tv_groupbuy_sellerinformation_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dip"
+                    android:text="电话："
+                    android:textColor="@color/grey"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_groupbuy_sellerinfo_phonenumlist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_groupbuy_sellerinformation_phone"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView style="@style/spline_main_draw_horizontal" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_sellerinfo_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

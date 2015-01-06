@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_sorlist_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        style="@style/bg_top_background" >
+
+      <Button
+            android:id="@+id/btn_groupbuy_sortlist_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" /> 
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="福桔装饰" >
+        </TextView>
+		<LinearLayout 
+             android:id="@+id/ll_groupbuy_sort"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent"
+             android:orientation="vertical"
+             android:gravity="center"
+             android:background="@drawable/state_press_bg_top_right"
+             android:layout_alignParentRight="true">
+            <TextView 
+                android:id="@+id/tv_groupbuy_sort1"
+                style="@style/font_content_medium_white"
+                android:text="关闭"/>
+            <TextView 
+                android:id="@+id/tv_groupbuy_sort2"
+                style="@style/font_content_medium_white"
+                android:text="广告"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_loading1"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_viewpager_container_sort_first_level1"
+        android:layout_below="@+id/rl_groupbuy_sorlist_title"
+        android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:orientation="vertical" >
+
+        <com.fsti.fjdicClient.activity.home.GalleryFlow
+            android:id="@+id/gall_groupbuysort_screenGallery"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:gravity="center_vertical" />
+        <!--
+		<ViewFlipper android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:id="@+id/viewflipper_main_container_groupbuy_sort"			></ViewFlipper>
+        -->
+    </LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/ll_groupbuysort_under"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_groupbuy_sortlist_bottommenu"
+        android:layout_below="@+id/ll_viewpager_container_sort_first_level1"
+        android:orientation="vertical" >
+	    
+	    <ImageView
+	        android:id="@+id/iv_groupbuysort_spline"
+	        style="@style/spline_main_draw_horizontal" 
+	        android:visibility="gone"/>
+	
+	    <TextView
+	        android:id="@+id/tv_sort_first_load1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="15dip"
+	        android:gravity="center_horizontal"
+	        android:text="数据加载中，请稍候。"
+	        android:textColor="@color/black"
+	        android:textSize="15sp" />
+	
+	    <ListView
+	        android:id="@+id/list_sort_first_level1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="2"
+	        android:background="#FFFFFF"
+	        android:cacheColorHint="#00000000"
+	        android:divider="@color/grey"
+	        android:dividerHeight="1dip"
+	        android:focusable="true"
+	        android:focusableInTouchMode="true" >
+	    </ListView>
+	</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_sortlist_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content" >
+    </RelativeLayout>
+
+</RelativeLayout>

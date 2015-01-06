@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabsLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0.0dip"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="0.0dip" >
+
+    <!--
+    <FrameLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_weight="0.6">
+
+		<ImageView android:layout_gravity="center"
+			android:id="@+id/main_activity_tab_image" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginTop="0.0dip"
+			android:scaleType="center" />
+	</FrameLayout>
+    -->
+
+    <ImageView
+        android:id="@+id/img_tab_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip" />
+
+    <TextView
+        android:id="@+id/tv_tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:text="333333"
+        android:textColor="@color/white"
+        android:textSize="14sp" >
+    </TextView>
+
+</LinearLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_orderinfo_title"
+        style="@style/bg_top_background"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/btn_mycenter_orderinfo_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back"
+            android:focusable="false" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="订单详情"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_mycentenr_orderinfo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/state_press_bg_top_right"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_mycenter_orderinfo_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rl_mycenter_orderinfo_bottommenu"
+        android:layout_below="@+id/rl_mycenter_orderinfo_title"
+        android:divider="@color/grey"
+        android:dividerHeight="1px" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:id="@+id/ll_mycenter_orderinfo_priceshow"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:text="总价："
+                    style="@style/font_title_medium_black" />
+
+                <TextView
+                    android:id="@+id/tv_mycentenr_orderinfo_totalprice"
+                    style="@style/font_title_medium_red"
+                    android:text=""
+                    android:layout_marginRight="5dip"
+                    android:textColor="@color/red_price"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_mycentenr_orderinfo_freightprice"
+                    style="@style/font_title_medium_gray"
+                    android:text="" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_mycenter_orderinfo_freighttype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_mycenter_orderinfo_priceshow"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/input_edit_draw"
+                android:padding="10dip" >
+
+                <TextView
+                    style="@style/font_title_medium_black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="配送物流" />
+
+                <TextView
+                    android:id="@+id/tv_mycenter_orderinfo_freighttype"
+                    style="@style/font_content_medium_gray"
+                    android:text="获取中..."
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dip" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/list_mycenter_orderinfo_order"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_mycenter_orderinfo_freighttype"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/input_edit_448x74"
+                android:cacheColorHint="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/ll_mycenter_orderinfo_consigneeinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_mycenter_orderinfo_order"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_mycenter_orderinfo_buytime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_login_top_448x74"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_mycenter_orderinfo_buytime1"
+                        style="@style/font_title_medium_black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="购买时间" />
+
+                    <TextView
+                        android:id="@+id/tv_mycenter_orderinfo_buytime2"
+                        style="@style/font_title_medium_gray"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tv_mycenter_orderinfo_buytime1"
+                        android:text="0000-00-00 00:00:00" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/list_mycenter_orderinfo_lvmoreorderinfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_login_middle_448x74"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_mycenter_orderinfo_message"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_login_bottom_448x74"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_mycenter_orderinfo_message1"
+                        style="@style/font_title_medium_black"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="附注留言：" />
+
+                    <TextView
+                        android:id="@+id/tv_mycenter_orderinfo_message2"
+                        style="@style/font_title_medium_gray"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/tv_mycenter_orderinfo_message1"
+                        android:layout_centerVertical="true"
+                        android:text="获取中..." />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_orderinfo_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_goodsdetail_title"
+        style="@style/bg_top_background" >
+
+        <Button
+            android:id="@+id/btn_groupbuy_goodsdetail_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/state_press_btn_top_back" />
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="团购商品详情" >
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_groupbuy_goodsdetail_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/state_press_btn_top_collect" />
+
+        <ImageView
+            android:id="@+id/iv_groupbuy_goodsdetail_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_groupbuy_gooddetail_bottommenu"
+        android:layout_below="@+id/rl_groupbuy_goodsdetail_title"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/linear_groupbuy_goodsdetaile_viewpager_container"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <ViewFlipper
+                    android:id="@+id/viewflipper_main_container_groupbuygoodsdetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ViewFlipper>
+                <!--
+    viewflipper_main_container_groupbuygoodsdetail
+    <com.fsti.communityClient.component.EventLinearLayout
+		 android:id="@+id/viewpager1" android:layout_width="fill_parent"
+		 	android:background="@color/grey"
+			android:layout_height="140dip" >
+		</com.fsti.communityClient.component.EventLinearLayout>                -->
+            </LinearLayout>
+
+            <ImageView style="@style/spline_main_draw_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_groupbuy_goodsdetail_describe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dip"
+                    android:text=""
+                    android:textColor="@color/black_shopping"
+                    android:textSize="16sp" />
+
+                <TableLayout
+                    android:id="@+id/tl_groupbuy_goodsdetail_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_groupbuy_goodsdetail_describe" >
+
+                    <TableRow android:layout_marginLeft="8dip" >
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="价格" />
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="：" />
+
+                        <TextView
+                            android:id="@+id/tv_groupbuy_goodsdetail_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/red_price"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginLeft="8dip"
+                        android:layout_marginTop="6dip" >
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="运费" />
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="：" />
+
+                        <TextView
+                            android:id="@+id/tv_groupbuy_goodsdetail_freight"
+                            style="@style/tv_table_secondrank_autosize"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginLeft="8dip"
+                        android:layout_marginTop="6dip" >
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="最近售出" />
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="：" />
+
+                        <TextView
+                            android:id="@+id/tv_groupbuy_goodsdetail_latelyselled"
+                            style="@style/tv_table_secondrank_autosize"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginLeft="8dip"
+                        android:layout_marginTop="6dip" >
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="收藏人气" />
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="：" />
+
+                        <TextView
+                            android:id="@+id/tv_groupbuy_goodsdetail_popularity"
+                            style="@style/tv_table_secondrank_autosize"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginLeft="8dip"
+                        android:layout_marginTop="6dip" >
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="商品类型" />
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="：" />
+
+                        <TextView
+                            android:id="@+id/tv_groupbuy_goodsdetail_goodstype"
+                            style="@style/tv_table_secondrank_autosize"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginLeft="8dip"
+                        android:layout_marginTop="6dip"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="库存量" />
+
+                        <TextView
+                            style="@style/tv_table_firstrank_autosize"
+                            android:text="：" />
+
+                        <TextView
+                            android:id="@+id/tv_groupbuy_goodsdetail_stocks"
+                            style="@style/tv_table_secondrank_autosize"
+                            android:text="" />
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_groupbuy_gooddetail_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_orderinfo_tvmoreorderinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_login_middle_448x74"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/tv_mycenter_orderinfo_tvmoreorderinfo1"
+            style="@style/tv_mycenter_firstrank_big"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="yyy" />
+
+        <TextView
+            android:id="@+id/tv_mycenter_orderinfo_tvmoreorderinfo2"
+            style="@style/tv_mycenter_secondrank_big"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_mycenter_orderinfo_tvmoreorderinfo1"
+            android:text="yyyy" />
+    </RelativeLayout>
+
+</LinearLayout>

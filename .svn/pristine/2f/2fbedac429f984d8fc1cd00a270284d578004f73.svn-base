@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:divider="@color/grey"
+    android:dividerHeight="1px"
+    android:orientation="vertical"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:id="@+id/mycenter_main_1"
+        style="@style/bg_top_background" >
+
+        <TextView
+            style="@style/bg_top_text"
+            android:text="个人中心" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/iv_mycenter_main_set"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:src="@drawable/state_select_setting" />
+		
+        <ImageView
+            android:id="@+id/iv_mycentermain_loading"
+            style="@style/style_iv_load" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rl_mycenter_main_bottommenu"
+        android:layout_below="@+id/mycenter_main_1"
+        android:divider="@color/grey"
+        android:dividerHeight="1px" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_mycenter_main_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="5dip"
+                    android:text="Miss.Alice_Lin256"
+                    android:textColor="@color/black_shopping"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_mycenter_main_mid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_mycenter_main_user"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mycenter_main_waitbuyerpay"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_login_top_448x74"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            style="@style/tv_mycenter_firstrank_big"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="待买家付款订单" />
+
+                        <ImageView
+                            android:id="@+id/iv_mycenter_main_top_btnright"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_bottom_right" />
+
+                        <TextView
+                            android:id="@+id/tv_mycenter_main_PayOrderNum"
+                            style="@style/tv_mycenter_secondrank_big"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/iv_mycenter_main_top_btnright"
+                            android:text="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mycenter_main_sellerdeliever"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_login_middle_448x74"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            style="@style/tv_mycenter_firstrank_big"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="待卖家发货订单" />
+
+                        <ImageView
+                            android:id="@+id/iv_mycenter_main_mid1_btnright"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/ic_bottom_right" />
+
+                        <TextView
+                            android:id="@+id/tv_mycenter_main_DeliverOrderNum"
+                            style="@style/tv_mycenter_secondrank_big"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/iv_mycenter_main_mid1_btnright"
+                            android:text="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mycenter_main_confirmreceiving"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_login_middle_448x74"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            style="@style/tv_mycenter_firstrank_big"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="待买家确认收货订单" />
+
+                        <ImageView
+                            android:id="@+id/iv_mycenter_main_mid2_btnright"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/ic_bottom_right" />
+
+                        <TextView
+                            android:id="@+id/tv_mycenter_main_ConfirmOrderNum"
+                            style="@style/tv_mycenter_secondrank_big"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/iv_mycenter_main_mid2_btnright"
+                            android:text="0" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_mycenter_main_historyorder"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_login_bottom_448x74"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            style="@style/tv_mycenter_firstrank_big"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="历史成功订单" />
+
+                        <ImageView
+                            android:id="@+id/iv_mycenter_main_bottom_btnright"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:src="@drawable/ic_bottom_right" />
+
+                        <TextView
+                            android:id="@+id/tv_mycenter_main_HistoryOrderNum"
+                            style="@style/tv_mycenter_secondrank_big"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/iv_mycenter_main_bottom_btnright"
+                            android:text="0" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mycenter_main_collect"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_mycenter_main_mid"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/input_edit_draw"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        style="@style/tv_mycenter_firstrank_big"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="收藏夹" />
+
+                    <ImageView
+                        android:id="@+id/tv_mycenter_main_collect_btnright"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/ic_bottom_right" />
+
+                    <TextView
+                        android:id="@+id/tv_mycenter_main_collectnum"
+                        style="@style/tv_mycenter_secondrank_big"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/tv_mycenter_main_collect_btnright"
+                        android:text="0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mycenter_main_addressmanager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_mycenter_main_collect"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/input_edit_draw"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+
+                    <TextView
+                        style="@style/tv_mycenter_firstrank_big"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="收货地址管理" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:src="@drawable/ic_bottom_right" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_mycenter_main_bottommenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>
