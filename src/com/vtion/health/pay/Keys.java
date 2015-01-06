@@ -21,11 +21,11 @@ public final class Keys {
 	public static final String DEFAULT_PARTNER = "2088001573350477";
 
 	// 收款支付宝账号
-	public static final String DEFAULT_SELLER = "liuna3058@163.com";
+	public static final String DEFAULT_SELLER = "test";
 
 	// 商户私钥，自助生成
-	public static final String PRIVATE = "MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJ12G8tVVwejQkj+SMFeaR4S9/iRgH6vGCPJhwiDJhmL4y8SIIzMry8PRQUs2+j9pQp6/WgoTi8AjftHxutcj02JhMws6dfuTuJ74bt5eAqvwB+v/wNA76cEPC6q4knkhInW2MIddU7FnrzYcpDHNt9yzGmJ9iiaWs+eFQHENZrDAgMBAAECgYAXMye1NcW04mEJ0C14ECj8vV67yPRdtf6ghzjWEDy01t+KN+mD1USacm2A7bMZCQYgHS7pAcdDNZm1xEWSt/iFAOT1wcsBfHE4kak0+nb5wnGvduNEeUjy0bkQSxk1s9+cRzsS/zDbNYR6iO/XdUqkRTo92SsiJAZ/IZs/TMxagQJBAM8PhPvQytTJC6Ues7mLztSGR6rCgvGtnsqX2GHaQwRPcguLVcyqYRE4qN7Ja3zF+RZAGFBTYvr/wNyu0msITfkCQQDCrYTx33x2/ESg16PBTXlTmu7pYRrOlX07PFtD5rTfN9iex4gKRk4KGAZ4OBaFIs6cN2W1QwdlAyqJjgj1Ls2bAkAl/GviIpjDVqq7PRmtpXdpR8UoD40kNzzVX+wDb54x0T1T3tj7thoepa1dSchdWJhsu496VQHomDjSg4P4vMpJAkEAp/2mMDYDKIXuDsGmPINHQ/75VQiHYmcbRseBlel6gPinA/T4jq02YH10776uqDpuAd3H9Y+ezOrbhRG85x55KwJAXZi8xaWoiF5xOQ6ma5zIDYYx6EILksDnppIRk0wi69KmrihoboZR74QY0IVrnnpRYM5b8xuII9FbF7BYPv+seQ==";
+	public static final String PRIVATE = "商户私钥，自助生成";
 
-	public static final String PUBLIC = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnxj/9qwVfgoUh/y2W89L6BkRAFljhNhgPdyPuBV64bfQNN1PjbCzkIM6qRdKBoLPXmKKMiFYnkd6rAoprih3/PrQEB/VsW8OoM8fxn67UDYuyBTqA23MML9q1+ilIZwBC2AQ2UBVOrFXfFl75p6/B5KsiNG9zpgmLCUYuLkxpLQIDAQAB";
+	public static final String PUBLIC = "商户私钥，自助生成";
 
 }
