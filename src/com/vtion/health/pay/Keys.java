@@ -21,7 +21,7 @@ public final class Keys {
 	public static final String DEFAULT_PARTNER = "2088001573350477";
 
 	// 收款支付宝账号
-	public static final String DEFAULT_SELLER = "test";
+	public static final String DEFAULT_SELLER = " 收款支付宝账号";
 
 	// 商户私钥，自助生成
 	public static final String PRIVATE = "商户私钥，自助生成";
