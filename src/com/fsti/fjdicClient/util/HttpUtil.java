@@ -45,6 +45,7 @@ public class HttpUtil {
         System.out.println("httputil config Url=" + reqUrl);
         try {
             if (null != parameters && parameters.size() > 0) {
+                parameters.put("CommunityId", "339");
                 for (Iterator<?> iter = parameters.entrySet().iterator(); iter.hasNext();) {
                     Entry<?, ?> element = (Entry<?, ?>) iter.next();
                     params.append(element.getKey().toString());
