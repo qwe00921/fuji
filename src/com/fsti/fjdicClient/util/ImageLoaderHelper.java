@@ -44,8 +44,11 @@ public class ImageLoaderHelper {
                                                .cacheInMemory(true)// 是否缓存
                                                .cacheOnDisc(true).displayer(new SimpleBitmapDisplayer()).build(); // 图片圆角
 
-    public static void displayImage(ImageView imageView, String uri) {
-        ImageLoader.getInstance().displayImage(uri, imageView, options);
+    public static void displayImage(ImageView imageView, String url) {
+        if (url != null && !url.equals("") && !url.substring(0, 5).equals("http:")) {
+            url = HttpUtil.base_url + url;
+        }
+        ImageLoader.getInstance().displayImage(url, imageView, options);
     }
 
     public static void displayImage(ImageView imageView, String uri, int tubImage, int emptyImg, int failImg) {

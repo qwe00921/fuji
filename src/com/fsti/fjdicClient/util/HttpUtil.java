@@ -21,9 +21,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo.State;
 
 public class HttpUtil {
-
-    private static int connectTimeOut = 600000; // 连接超时时间毫秒
-    private static int readTimeOut    = 600000; // 数据读取超时时间毫秒
+    public static final String base_url       = "http://www.365sq.com/";
+    private static int         connectTimeOut = 600000;                 // 连接超时时间毫秒
+    private static int         readTimeOut    = 600000;                 // 数据读取超时时间毫秒
 
     // private static String encoding = "UTF-8"; //编码
     /**

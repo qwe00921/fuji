@@ -66,7 +66,7 @@ import com.fsti.fjdicClient.bean.HomemaininfoEntity;
 import com.fsti.fjdicClient.dao.BusinessDao;
 import com.fsti.fjdicClient.util.GlobalVarUtil;
 import com.fsti.fjdicClient.util.HttpUtil;
-import com.fsti.fjdicClient.util.SyncImageLoadUtil;
+import com.fsti.fjdicClient.util.ImageLoaderHelper;
 import com.fsti.fjdicClient.util.ViewUtil;
 import com.fsti.fjdicClient.util.asyncUtil.CallEarliest;
 import com.fsti.fjdicClient.util.asyncUtil.Callable;
@@ -84,32 +84,32 @@ import com.umeng.update.UpdateResponse;
  * @author 金涛
  */
 public class HomeMainActivity extends BaseActivity implements OnClickListener, OnItemClickListener {
-    private static final String          TAG             = "HomeMainActivity";
-    public static int                    i               = 0;
-    private boolean                      isFirstAdv      = true;
+    private static final String          TAG            = "HomeMainActivity";
+    public static int                    i              = 0;
+    private boolean                      isFirstAdv     = true;
     // 采用自定义gallery
-    public static int                    advcounts       = 0;
-    public static String                 homestart       = "start";
+    public static int                    advcounts      = 0;
+    public static String                 homestart      = "start";
     public static GalleryFlow            advGallery;
     public static Timer                  timer;
     public static TimerTask              task;
-    public static int                    interval        = 6000;
-    public static int                    index           = 0;
-    public static boolean                isStop          = false;
-    public static String                 FLAGTOSHOPPING  = "";
-    public static String                 FLAGTOGROUP     = "";
-    public SyncImageLoadUtil             syncImageLoader = null;
+    public static int                    interval       = 6000;
+    public static int                    index          = 0;
+    public static boolean                isStop         = false;
+    public static String                 FLAGTOSHOPPING = "";
+    public static String                 FLAGTOGROUP    = "";
+    // public SyncImageLoadUtil syncImageLoader = null;
     public Context                       context;
     private LinearLayout                 linearMainViewpagerContainer;
 
     private ImageView                    ivLoading;
-    private List<AdvEntity>              myActivityList  = new ArrayList<AdvEntity>();
-    private HomemaininfoEntity           entity          = new HomemaininfoEntity();
+    private List<AdvEntity>              myActivityList = new ArrayList<AdvEntity>();
+    private HomemaininfoEntity           entity         = new HomemaininfoEntity();
     private ImageView                    iv_online_img;
     private TextView                     tv_online_text;
     private TextView                     tv_online_text2;
-    public static int                    screenWidth     = 0;
-    private int                          screenHeight    = 0;
+    public static int                    screenWidth    = 0;
+    private int                          screenHeight   = 0;
     private LinearLayout                 tohome;
     private LinearLayout                 tosearch;
     private LinearLayout                 toshoppingcart;
@@ -133,7 +133,7 @@ public class HomeMainActivity extends BaseActivity implements OnClickListener, O
     private Thread                       thread1;
     private Thread                       thread2;
     private CustomListview               listGroupbuyMain;
-    private static List<GoodsEntity>     goodsList       = new ArrayList<GoodsEntity>();
+    private static List<GoodsEntity>     goodsList      = new ArrayList<GoodsEntity>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -361,9 +361,10 @@ public class HomeMainActivity extends BaseActivity implements OnClickListener, O
     }
 
     private void loading_view_content() {// 加载页面内容
-        SyncImageLoadUtil syncImageLoad = new SyncImageLoadUtil();
+        // SyncImageLoadUtil syncImageLoad = new SyncImageLoadUtil();
         if (!entity.getOnline_img().equals("") && entity.getOnline_img() != null) {
-            syncImageLoad.displayImage(entity.getOnline_img(), iv_online_img, HomeMainActivity.this);
+            ImageLoaderHelper.displayImage(iv_online_img, entity.getOnline_img());
+            // syncImageLoad.displayImage(entity.getOnline_img(), iv_online_img, HomeMainActivity.this);
         }
         if (!entity.getOnline_text().equals("") && entity.getOnline_text() != null) {
             tv_online_text.setText(entity.getOnline_text());
@@ -450,8 +451,8 @@ public class HomeMainActivity extends BaseActivity implements OnClickListener, O
                 e.printStackTrace();
             }
             ScreenSaverGalleryAdapter adapter = null;
-            syncImageLoader = new SyncImageLoadUtil(GlobalVarUtil.MAIN_ADV_IMAGE_SAVE_PATH);
-            adapter = new ScreenSaverGalleryAdapter(getBaseContext(), myActivityList, syncImageLoader);
+            // syncImageLoader = new SyncImageLoadUtil(GlobalVarUtil.MAIN_ADV_IMAGE_SAVE_PATH);
+            adapter = new ScreenSaverGalleryAdapter(getBaseContext(), myActivityList);
             advGallery.setAdapter(adapter);
             advGallery.setSelection(myActivityList.size() * 100);
             advGallery.setVisibility(View.VISIBLE);
@@ -531,16 +532,16 @@ public class HomeMainActivity extends BaseActivity implements OnClickListener, O
 
     class ScreenSaverGalleryAdapter extends BaseAdapter {
 
-        int                       mGalleryItemBackground;
-        private Context           mContext;
-        private LayoutInflater    myInflater;
-        private SyncImageLoadUtil mySilu;
-        private List<AdvEntity>   advList;
+        int                     mGalleryItemBackground;
+        private Context         mContext;
+        private LayoutInflater  myInflater;
+        // private SyncImageLoadUtil mySilu;
+        private List<AdvEntity> advList;
 
-        public ScreenSaverGalleryAdapter(Context c, List<AdvEntity> advList, SyncImageLoadUtil mySilu) {
+        public ScreenSaverGalleryAdapter(Context c, List<AdvEntity> advList) {
             this.mContext = c;
             this.advList = advList;
-            this.mySilu = mySilu;
+            // this.mySilu = mySilu;
             myInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
@@ -567,7 +568,8 @@ public class HomeMainActivity extends BaseActivity implements OnClickListener, O
                 holder = (ViewHolder) convertView.getTag();
             }
             holder.sImage.setScaleType(ScaleType.CENTER_CROP);
-            mySilu.displayImage(advList.get(position % advList.size()).getImageUrl(), holder.sImage, mContext);
+            ImageLoaderHelper.displayImage(holder.sImage, advList.get(position % advList.size()).getImageUrl());
+            // mySilu.displayImage(advList.get(position % advList.size()).getImageUrl(), holder.sImage, mContext);
             return convertView;
         }
 

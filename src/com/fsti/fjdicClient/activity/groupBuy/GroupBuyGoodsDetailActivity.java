@@ -48,7 +48,7 @@ import com.fsti.fjdicClient.bean.GoodsEntity;
 import com.fsti.fjdicClient.dao.BusinessDao;
 import com.fsti.fjdicClient.util.GlobalVarUtil;
 import com.fsti.fjdicClient.util.HttpUtil;
-import com.fsti.fjdicClient.util.SyncImageLoadUtil;
+import com.fsti.fjdicClient.util.ImageLoaderHelper;
 import com.fsti.fjdicClient.util.ViewUtil;
 import com.fsti.fjdicClient.util.asyncUtil.CallEarliest;
 import com.fsti.fjdicClient.util.asyncUtil.Callable;
@@ -59,43 +59,43 @@ import com.google.gson.reflect.TypeToken;
 //商品详情
 public class GroupBuyGoodsDetailActivity extends BaseActivity implements OnClickListener, OnGestureListener {
     // #...yyy
-    private List<GoodsEntity>                     goodsList       = new ArrayList<GoodsEntity>();
-    private Button                                btnGoodsdetailCollect;
-    private Button                                btgoodsdetailBack;
-    private TextView                              tvgoodsdetailDiscribe;
-    private TextView                              tvgoodsdetailPrice;
-    private TextView                              tvgoodsdetailFreight;
-    private TextView                              tvgoodsdetailLatelyselled;
-    private TextView                              tvgoodsdetailPopularity;
-    private TextView                              tvgoodsdetailGoodstype;
-    private TextView                              tvgoodsdetailStocks;
-    private GoodsDetailInfoEntity                 goodsinfo;
-    private String                                goodsID;
-    private String                                imageUrl;
-    private ImageView                             ivLoading;
+    private List<GoodsEntity>        goodsList   = new ArrayList<GoodsEntity>();
+    private Button                   btnGoodsdetailCollect;
+    private Button                   btgoodsdetailBack;
+    private TextView                 tvgoodsdetailDiscribe;
+    private TextView                 tvgoodsdetailPrice;
+    private TextView                 tvgoodsdetailFreight;
+    private TextView                 tvgoodsdetailLatelyselled;
+    private TextView                 tvgoodsdetailPopularity;
+    private TextView                 tvgoodsdetailGoodstype;
+    private TextView                 tvgoodsdetailStocks;
+    private GoodsDetailInfoEntity    goodsinfo;
+    private String                   goodsID;
+    private String                   imageUrl;
+    private ImageView                ivLoading;
 
-    private List<AdvEntity>                       myAdvList       = new ArrayList<AdvEntity>();
-    private ScheduledExecutorService              scheduledExecutorService;
-    private static ViewPager                      myViewPager;
-    private SyncImageLoadUtil.OnImageLoadListener imageLoadListener;
-    public static SyncImageLoadUtil               syncImageLoader = null;
-    private LinearLayout                          llViewpagerContainer;
-    private LinearLayout                          llyDotViewGroup;
-    private FrameLayout                           frameView;
-    private static int                            currentItem     = 0;                           // 当前图片的索引号
+    private List<AdvEntity>          myAdvList   = new ArrayList<AdvEntity>();
+    private ScheduledExecutorService scheduledExecutorService;
+    private static ViewPager         myViewPager;
+    // private SyncImageLoadUtil.OnImageLoadListener imageLoadListener;
+    // public static SyncImageLoadUtil syncImageLoader = null;
+    private LinearLayout             llViewpagerContainer;
+    private LinearLayout             llyDotViewGroup;
+    private FrameLayout              frameView;
+    private static int               currentItem = 0;                           // 当前图片的索引号
 
-    private LinearLayout                          tohome;
-    private LinearLayout                          tosearch;
-    private LinearLayout                          toshoppingcart;
-    private LinearLayout                          tomycenter;
-    private LinearLayout                          tomore;
-    private RelativeLayout                        bottommenu;
+    private LinearLayout             tohome;
+    private LinearLayout             tosearch;
+    private LinearLayout             toshoppingcart;
+    private LinearLayout             tomycenter;
+    private LinearLayout             tomore;
+    private RelativeLayout           bottommenu;
     // 手势切换图片
-    private ViewFlipper                           viewflipImage;
-    private int                                   indexTop        = 0;
-    private GestureDetector                       detector        = new GestureDetector(this);
-    private SyncImageLoadUtil                     syncImageLoad   = new SyncImageLoadUtil();
-    private List<String>                          urls            = new ArrayList<String>();
+    private ViewFlipper              viewflipImage;
+    private int                      indexTop    = 0;
+    private GestureDetector          detector    = new GestureDetector(this);
+    // private SyncImageLoadUtil syncImageLoad = new SyncImageLoadUtil();
+    private List<String>             urls        = new ArrayList<String>();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -218,7 +218,8 @@ public class GroupBuyGoodsDetailActivity extends BaseActivity implements OnClick
                 iv[i].setScaleType(ImageView.ScaleType.FIT_CENTER);
                 viewflipImage.addView(iv[i]);
                 indexTop = i;
-                syncImageLoad.displayImage(urls.get(i), iv[i], this);
+                ImageLoaderHelper.displayImage(iv[i], urls.get(i));
+                // syncImageLoad.displayImage(urls.get(i), iv[i], this);
                 iv[i].setOnClickListener(new ImageOnClickListener(i));
             }
         }

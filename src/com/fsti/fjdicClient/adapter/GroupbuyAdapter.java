@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.fsti.fjdicClient.R;
 import com.fsti.fjdicClient.bean.GoodsEntity;
-import com.fsti.fjdicClient.util.SyncImageLoadUtil;
+import com.fsti.fjdicClient.util.ImageLoaderHelper;
 
 public class GroupbuyAdapter extends BaseAdapter {
 
@@ -83,8 +83,8 @@ public class GroupbuyAdapter extends BaseAdapter {
 
         // holder.tvGoodsIntro.setText(myList.get(position).getIntro());
         holder.tvGoodsName.setText(myList.get(position).getName());
-
-        new SyncImageLoadUtil().displayImage(myList.get(position).getImageUrl(), holder.ivGoods, myContext);
+        ImageLoaderHelper.displayImage(holder.ivGoods, myList.get(position).getImageUrl());
+        // new SyncImageLoadUtil().displayImage(myList.get(position).getImageUrl(), holder.ivGoods, myContext);
 
         return convertView;
     }

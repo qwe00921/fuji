@@ -68,7 +68,7 @@ import com.fsti.fjdicClient.dao.BusinessDao;
 import com.fsti.fjdicClient.listener.ViewPagerChangeListener;
 import com.fsti.fjdicClient.util.GlobalVarUtil;
 import com.fsti.fjdicClient.util.HttpUtil;
-import com.fsti.fjdicClient.util.SyncImageLoadUtil;
+import com.fsti.fjdicClient.util.ImageLoaderHelper;
 import com.fsti.fjdicClient.util.ViewUtil;
 import com.fsti.fjdicClient.util.asyncUtil.CallEarliest;
 import com.fsti.fjdicClient.util.asyncUtil.Callable;
@@ -100,63 +100,63 @@ public class GroupBuyDetailActivity extends BaseActivity implements OnClickListe
         super.onPause();
     }
 
-    private Thread                                thread1;
-    private Thread                                thread2;
+    private Thread                   thread1;
+    private Thread                   thread2;
     // 从广告处进入该页面
-    private AdvEntity                             advEntity;
-    private List<GoodsEntity>                     goodsList       = new ArrayList<GoodsEntity>();
+    private AdvEntity                advEntity;
+    private List<GoodsEntity>        goodsList   = new ArrayList<GoodsEntity>();
 
     // 手势切换图片
-    private ViewFlipper                           viewflipImage;
-    private int                                   indexTop        = 0;
-    private GestureDetector                       detector        = new GestureDetector(this);
-    private SyncImageLoadUtil                     syncImageLoad   = new SyncImageLoadUtil();
-    private boolean                               isClick         = true;
-    private List<String>                          urls            = new ArrayList<String>();
+    private ViewFlipper              viewflipImage;
+    private int                      indexTop    = 0;
+    private GestureDetector          detector    = new GestureDetector(this);
+    // private SyncImageLoadUtil syncImageLoad = new SyncImageLoadUtil();
+    private boolean                  isClick     = true;
+    private List<String>             urls        = new ArrayList<String>();
 
-    private Button                                btgroupbuyBack;
-    private Button                                btgroupbuyCollect;
-    private TextView                              tvgroupbuyNowprice;
-    private TextView                              tvgroupbuyOldprice;
-    private Button                                btgroupbuyBuy;
-    private Button                                btn_groupbuy_groupbuydetail_add;
-    private TextView                              tvgroupbuyGoodsname;
-    private TextView                              tvgroupbuyBuyercount;
-    private static TextView                       tvgroupbuyTimeday;
-    private static TextView                       tvgroupbuyTimehour;
-    private static TextView                       tvgroupbuyTimeminute;
-    private static TextView                       tvgroupbuyTimesecond;
-    private RelativeLayout                        llgroupbuyGoodsdetail;
-    private RelativeLayout                        llgroupbuySellerdetail;
-    private RelativeLayout                        llgroupbuycommentsdetail;
-    private GoodsEntity                           goodsEntity;
-    private GoodsDetailInfoEntity                 goodsinfo;
-    private ImageView                             ivLoading;
-    private ScrollView                            srcollMain;
-    private TextView                              tvLoaderror;
+    private Button                   btgroupbuyBack;
+    private Button                   btgroupbuyCollect;
+    private TextView                 tvgroupbuyNowprice;
+    private TextView                 tvgroupbuyOldprice;
+    private Button                   btgroupbuyBuy;
+    private Button                   btn_groupbuy_groupbuydetail_add;
+    private TextView                 tvgroupbuyGoodsname;
+    private TextView                 tvgroupbuyBuyercount;
+    private static TextView          tvgroupbuyTimeday;
+    private static TextView          tvgroupbuyTimehour;
+    private static TextView          tvgroupbuyTimeminute;
+    private static TextView          tvgroupbuyTimesecond;
+    private RelativeLayout           llgroupbuyGoodsdetail;
+    private RelativeLayout           llgroupbuySellerdetail;
+    private RelativeLayout           llgroupbuycommentsdetail;
+    private GoodsEntity              goodsEntity;
+    private GoodsDetailInfoEntity    goodsinfo;
+    private ImageView                ivLoading;
+    private ScrollView               srcollMain;
+    private TextView                 tvLoaderror;
 
-    private List<AdvEntity>                       myAdvList       = new ArrayList<AdvEntity>();
-    private ScheduledExecutorService              scheduledExecutorService;
-    private static ViewPager                      myViewPager;
-    private SyncImageLoadUtil.OnImageLoadListener imageLoadListener;
-    public static SyncImageLoadUtil               syncImageLoader = null;
-    private LinearLayout                          llViewpagerContainer;
-    private LinearLayout                          llyDotViewGroup;
-    private FrameLayout                           frameView;
-    private static int                            currentItem     = 0;                           // 当前图片的索引号
+    private List<AdvEntity>          myAdvList   = new ArrayList<AdvEntity>();
+    private ScheduledExecutorService scheduledExecutorService;
+    private static ViewPager         myViewPager;
+    // private SyncImageLoadUtil.OnImageLoadListener imageLoadListener;
+    // public static SyncImageLoadUtil syncImageLoader = null;
+    private LinearLayout             llViewpagerContainer;
+    private LinearLayout             llyDotViewGroup;
+    private FrameLayout              frameView;
+    private static int               currentItem = 0;                           // 当前图片的索引号
 
-    private LinearLayout                          tohome;
-    private LinearLayout                          tosearch;
-    private LinearLayout                          toshoppingcart;
-    private LinearLayout                          tomycenter;
-    private LinearLayout                          tomore;
-    private RelativeLayout                        bottommenu;
-    private boolean                               isAdv           = false;
-    private boolean                               isGetInfo       = false;
+    private LinearLayout             tohome;
+    private LinearLayout             tosearch;
+    private LinearLayout             toshoppingcart;
+    private LinearLayout             tomycenter;
+    private LinearLayout             tomore;
+    private RelativeLayout           bottommenu;
+    private boolean                  isAdv       = false;
+    private boolean                  isGetInfo   = false;
 
     // 从订单处来
-    private int                                   type            = 0;
-    private String                                goodsID         = "";
+    private int                      type        = 0;
+    private String                   goodsID     = "";
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -239,7 +239,8 @@ public class GroupBuyDetailActivity extends BaseActivity implements OnClickListe
                 iv[i].setScaleType(ImageView.ScaleType.FIT_CENTER);
                 viewflipImage.addView(iv[i]);
                 indexTop = i;
-                syncImageLoad.displayImage(urls.get(i), iv[i], this);
+                // syncImageLoad.displayImage(urls.get(i), iv[i], this);
+                ImageLoaderHelper.displayImage(iv[i], urls.get(i));
                 iv[i].setOnClickListener(new ImageOnClickListener(i));
             }
         }
@@ -248,11 +249,11 @@ public class GroupBuyDetailActivity extends BaseActivity implements OnClickListe
 
     public void initViewPager() {
         AdvertiseViewPagerService advService = new AdvertiseViewPagerService(myViewPager, myAdvList, this);
-        ArrayList<View> viewList = advService.getViewList();
+        ArrayList<ImageView> viewList = advService.getViewList();
         ImageView[] imageArray = advService.getPageViewDotImage(llyDotViewGroup);
-        syncImageLoader = new SyncImageLoadUtil(GlobalVarUtil.MAIN_ADV_IMAGE_SAVE_PATH);
-        imageLoadListener = advService.imageLoadListener;
-        myViewPager.setAdapter(new AdvViewPagerAdapter(viewList, myAdvList, syncImageLoader, imageLoadListener));
+        // syncImageLoader = new SyncImageLoadUtil(GlobalVarUtil.MAIN_ADV_IMAGE_SAVE_PATH);
+        // imageLoadListener = advService.imageLoadListener;
+        myViewPager.setAdapter(new AdvViewPagerAdapter(viewList, myAdvList));
         myViewPager.setOnPageChangeListener(new ViewPagerChangeListener(imageArray));
         llViewpagerContainer.addView(frameView);
         try {
